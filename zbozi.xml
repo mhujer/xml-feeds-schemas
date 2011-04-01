@@ -10,6 +10,7 @@
         <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
         <PRICE>620</PRICE>
         <PRICE_VAT>756</PRICE_VAT>
+        <VAT>20</VAT>
     </SHOPITEM>
     <SHOPITEM>
         <PRODUCT>Světélkující podložka pod myš</PRODUCT>
@@ -20,6 +21,7 @@
         <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
         <PRICE>620</PRICE>
         <PRICE_VAT>756</PRICE_VAT>
+        <VAT>0.2</VAT>
     </SHOPITEM>
     <SHOPITEM>
         <PRODUCT>Světélkující podložka pod myš</PRODUCT>
@@ -30,6 +32,7 @@
         <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
         <PRICE>620</PRICE>
         <PRICE_VAT>756</PRICE_VAT>
+        <VAT>0</VAT>
     </SHOPITEM>
     <SHOPITEM>
         <PRODUCT>Světélkující podložka pod myš</PRODUCT>
