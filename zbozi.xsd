@@ -37,6 +37,21 @@
                   </xs:union>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="IMGURL" type="xs:anyURI"/>
+              <xs:element name="PRICE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:decimal">
+                    <xs:minExclusive value="0"></xs:minExclusive>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRICE_VAT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:decimal">
+                    <xs:minExclusive value="0"></xs:minExclusive>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
