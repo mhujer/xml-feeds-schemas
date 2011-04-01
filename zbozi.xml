@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SHOP xmlns="urn:x-hujer:feed:zbozi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:x-hujer:feed:zbozi zbozi.xsd">
+    <SHOPITEM>
+        <PRODUCT>Světélkující podložka pod myš</PRODUCT>
+        <DESCRIPTION>Fosforeskující okraj, nevyžaduje baterie.</DESCRIPTION>
+        <URL>http://obchod.cz/podlozky-pod-mys/fosfor</URL>
+        <ITEM_TYPE>new</ITEM_TYPE>
+        <DELIVERY_DATE>0</DELIVERY_DATE>
+        <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
+        <PRICE>620</PRICE>
+        <PRICE_VAT>756</PRICE_VAT>
+    </SHOPITEM>
+    <SHOPITEM>
+        <PRODUCT>Světélkující podložka pod myš</PRODUCT>
+        <DESCRIPTION>Fosforeskující okraj, nevyžaduje baterie.</DESCRIPTION>
+        <URL>http://obchod.cz/podlozky-pod-mys/fosfor</URL>
+        <ITEM_TYPE>new</ITEM_TYPE>
+        <DELIVERY_DATE>1</DELIVERY_DATE>
+        <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
+        <PRICE>620</PRICE>
+        <PRICE_VAT>756</PRICE_VAT>
+    </SHOPITEM>
+    <SHOPITEM>
+        <PRODUCT>Světélkující podložka pod myš</PRODUCT>
+        <DESCRIPTION>Fosforeskující okraj, nevyžaduje baterie.</DESCRIPTION>
+        <URL>http://obchod.cz/podlozky-pod-mys/fosfor</URL>
+        <ITEM_TYPE>new</ITEM_TYPE>
+        <DELIVERY_DATE>ihned</DELIVERY_DATE>
+        <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
+        <PRICE>620</PRICE>
+        <PRICE_VAT>756</PRICE_VAT>
+    </SHOPITEM>
+    <SHOPITEM>
+        <PRODUCT>Světélkující podložka pod myš</PRODUCT>
+        <DESCRIPTION>Fosforeskující okraj, nevyžaduje baterie.</DESCRIPTION>
+        <URL>http://obchod.cz/podlozky-pod-mys/fosfor</URL>
+        <ITEM_TYPE>new</ITEM_TYPE>
+        <DELIVERY_DATE>2011-11-11</DELIVERY_DATE>
+        <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
+        <PRICE>620</PRICE>
+        <PRICE_VAT>756</PRICE_VAT>
+    </SHOPITEM>
+</SHOP>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:x-hujer:feed:zbozi"
+  xmlns="urn:x-hujer:feed:zbozi" elementFormDefault="qualified">
+  <xs:element name="SHOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SHOPITEM" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PRODUCT" type="xs:string"/>
+              <xs:element name="DESCRIPTION" type="xs:string"/>
+              <xs:element name="URL" type="xs:anyURI"/>
+              <xs:element name="ITEM_TYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="new"/>
+                    <xs:enumeration value="bazaar"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DELIVERY_DATE">
+                <xs:simpleType>
+                  <xs:union>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:date"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:int">
+                        <xs:minInclusive value="0"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="ihned"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:union>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
