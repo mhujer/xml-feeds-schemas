@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:x-hujer:feed:zbozi"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron" targetNamespace="urn:x-hujer:feed:zbozi"
   xmlns="urn:x-hujer:feed:zbozi" elementFormDefault="qualified">
   <xs:element name="SHOP">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="SHOPITEM" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:appinfo>
+              <sch:ns uri="urn:x-hujer:feed:zbozi" prefix="feed"/>
+              <sch:pattern
+                name="PRODUCT je nepovinný, pokud jsou uvedeny elementy PRODUCTNAME a PRODUCTNAMEEXT">
+                <sch:rule context="feed:SHOPITEM">
+                  <sch:report
+                    test="(not(feed:PRODUCTNAME) or not(feed:PRODUCTNAMEEXT)) and not(feed:PRODUCT)"
+                    >Není zadáno PRODUCT ani PRODUCTNAME a PRODUCTNAMEEXT</sch:report>
+                </sch:rule>
+              </sch:pattern>
+              <sch:pattern name="PRICE_VAT je nepovinné, pokud jsou vyplněn PRICE a VAT">
+                <sch:rule context="feed:SHOPITEM">
+                  <sch:report test="(not(feed:PRICE) or not(feed:VAT)) and not(feed:PRICE_VAT)">Není
+                    zadáno PRICE_VAT ani PRICE a VAT</sch:report>
+                </sch:rule>
+              </sch:pattern>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="PRODUCT" type="xs:string"/>
+              <xs:element name="PRODUCT" type="xs:string" minOccurs="0"/>
+              <xs:element name="PRODUCTNAME" type="xs:string" minOccurs="0"/>
+              <xs:element name="PRODUCTNAMEEXT" type="xs:string" minOccurs="0"/>
               <xs:element name="DESCRIPTION" type="xs:string"/>
               <xs:element name="URL" type="xs:anyURI"/>
               <xs:element name="ITEM_TYPE">
@@ -57,7 +79,7 @@
                   </xs:union>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DUES" type="TYPE_PRICE"/>
+              <xs:element name="DUES" type="TYPE_PRICE" minOccurs="0"/>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
