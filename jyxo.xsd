@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron" targetNamespace="urn:x-hujer:feed:jyxo"
+  xmlns="urn:x-hujer:feed:jyxo" elementFormDefault="qualified">
+  <xs:element name="SHOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SHOPITEM" maxOccurs="unbounded">
+          <xs:annotation>
+            <!-- @todo - proč nejde? -->
+            <xs:appinfo>
+              <sch:pattern name="Je správně zadaná DPH?">
+                <sch:rule context="SHOPITEM">
+                  <sch:assert test="TEST">AA</sch:assert>
+                  <sch:report test="TEST">AA</sch:report>
+                </sch:rule>
+              </sch:pattern>
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PRODUCT" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>Stručný název výrobku či služby (délky nejlépe do 64
+                    znaků).</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="DESCRIPTION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URL" type="xs:anyURI"/>
+              <xs:element name="IMGURL" type="xs:anyURI" minOccurs="0"/>
+              <!-- @todo check PRICE/PRICE_VAT/VAT with Schematron! -->
+              <xs:element name="PRICE" minOccurs="0" type="TYPE_PRICE_POSITIVE"/>
+              <xs:element name="PRICE_VAT" minOccurs="0" type="TYPE_PRICE_POSITIVE"/>
+              <xs:element name="VAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:union>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="0"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="0"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:union>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MANUFACTURER" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Jméno výrobce produktu.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="EAN" type="TYPE_EAN13_CODE" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>validní kód výrobku EAN13</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="DELIVERY_DATE" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>dodací doba zboží ve dnech</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:union>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:date"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:int">
+                        <xs:minInclusive value="0"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="ihned"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:union>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEM_TYPE" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Pokud je daná položka bazarová, uveďte jako hodnotu bazaar.
+                    Jinak můžete tuto položku vypustit.</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="new"/>
+                    <xs:enumeration value="bazaar"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="TYPE_PRICE_POSITIVE">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"/>
+      <xs:fractionDigits value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TYPE_EAN13_CODE">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"/>
+      <xs:fractionDigits value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
