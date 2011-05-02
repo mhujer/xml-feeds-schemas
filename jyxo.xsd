@@ -110,9 +110,8 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TYPE_EAN13_CODE">
-    <xs:restriction base="xs:decimal">
-      <xs:minExclusive value="0"/>
-      <xs:fractionDigits value="4"/>
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="13"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>
