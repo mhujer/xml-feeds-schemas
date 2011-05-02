@@ -5,9 +5,9 @@ Cílem je zlepšit situaci kolem XML pro srovnávače zboží a zjednodušit jej
 
 ## Stávající situace
 - Každý zbožový srovnávač má svůj formát feedu
--- Specifikace Zboží.cz http://napoveda.seznam.cz/cz/specifikace-xml.html
--- Specifikace Heureka.cz http://sluzby.heureka.cz/napoveda/import/
--- Jyxo srovnávač http://admin.vybereme.cz/format-xml-feedu	
+ - Specifikace Zboží.cz http://napoveda.seznam.cz/cz/specifikace-xml.html
+ - Specifikace Heureka.cz http://sluzby.heureka.cz/napoveda/import/
+ - Jyxo srovnávač http://admin.vybereme.cz/format-xml-feedu	
 - Jejich XMLka nemají definované schéma - nedá se poznat, zda export z eshopu je OK
 - Je spoustu práce s generováním validních feedů pro různé srovnávače
 
