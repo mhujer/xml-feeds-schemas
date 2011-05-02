@@ -1,26 +1,26 @@
-# Schémata a transformace pro srovnávaèe zboí
+# SchÃ©mata a transformace pro srovnÃ¡vaÄe zboÅ¾Ã­
 
-## Pøehled
-Cílem je zlepšit situaci kolem XML pro srovnávaèe zboí a zjednodušit jejich generování.
+## PÅ™ehled
+CÃ­lem je zlepÅ¡it situaci kolem XML pro srovnÃ¡vaÄe zboÅ¾Ã­ a zjednoduÅ¡it jejich generovÃ¡nÃ­.
 
-## Stávající situace
-- Kadı zboovı srovnávaè má svùj formát feedu
--- Specifikace Zboí.cz http://napoveda.seznam.cz/cz/specifikace-xml.html
+## StÃ¡vajÃ­cÃ­ situace
+- KaÅ¾dÃ½ zboÅ¾ovÃ½ srovnÃ¡vaÄ mÃ¡ svÅ¯j formÃ¡t feedu
+-- Specifikace ZboÅ¾Ã­.cz http://napoveda.seznam.cz/cz/specifikace-xml.html
 -- Specifikace Heureka.cz http://sluzby.heureka.cz/napoveda/import/
--- Jyxo srovnávaè http://admin.vybereme.cz/format-xml-feedu	
-- Jejich XMLka nemají definované schéma - nedá se poznat, zda export z eshopu je OK
-- Je spoustu práce s generováním validních feedù pro rùzné srovnávaèe
+-- Jyxo srovnÃ¡vaÄ http://admin.vybereme.cz/format-xml-feedu	
+- Jejich XMLka nemajÃ­ definovanÃ© schÃ©ma - nedÃ¡ se poznat, zda export z eshopu je OK
+- Je spoustu prÃ¡ce s generovÃ¡nÃ­m validnÃ­ch feedÅ¯ pro rÅ¯znÃ© srovnÃ¡vaÄe
 
 
-## Cíle práce
+## CÃ­le prÃ¡ce
 
-### Zjednodušit generování feedù pro srovnávaèe
-- vytvoøím universální XML formát pro export zboí
-- vytvoøím transformace, které z jednoho XML vytvoøí XML pro jednotlivé srovnávaèe
+### ZjednoduÅ¡it generovÃ¡nÃ­ feedÅ¯ pro srovnÃ¡vaÄe
+- vytvoÅ™Ã­m universÃ¡lnÃ­ XML formÃ¡t pro export zboÅ¾Ã­
+- vytvoÅ™Ã­m transformace, kterÃ© z jednoho XML vytvoÅ™Ã­ XML pro jednotlivÃ© srovnÃ¡vaÄe
 
-### Sníit mnoství chyb pøi vytváøení feedù
-- vytvoøím schémata pro jednotlivé srovnávaèe (podle jejich textového popisu XML feedu)
-- jednotlivıch srovnávaèùm navrhnu zahrnutí schématu do popisu sluby
+### SnÃ­Å¾it mnoÅ¾stvÃ­ chyb pÅ™i vytvÃ¡Å™enÃ­ feedÅ¯
+- vytvoÅ™Ã­m schÃ©mata pro jednotlivÃ© srovnÃ¡vaÄe (podle jejich textovÃ©ho popisu XML feedu)
+- jednotlivÃ½ch srovnÃ¡vaÄÅ¯m navrhnu zahrnutÃ­ schÃ©matu do popisu sluÅ¾by
 
-### Zlepšit User-Experience pøi práci s feedy
-- vytvoøím xsl transformace, které budou pøipojeny ke koneènım XML - pøi zobrazení v browseru bude feed pøehlednìjší
+### ZlepÅ¡it User-Experience pÅ™i prÃ¡ci s feedy
+- vytvoÅ™Ã­m xsl transformace, kterÃ© budou pÅ™ipojeny ke koneÄnÃ½m XML - pÅ™i zobrazenÃ­ v browseru bude feed pÅ™ehlednÄ›jÅ¡Ã­
