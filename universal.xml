@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SHOP xmlns="urn:x-hujer:feed:universal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:x-hujer:feed:universal universal.xsd">
+    <ITEM>
+        <PRODUCTNAME>Mobilní telefon NK5678</PRODUCTNAME>
+        <PRODUCTNAMEEXT>Doplnění</PRODUCTNAMEEXT>
+        <DESCRIPTION>Klasický s plným dotykovým uživatelským rozhraním</DESCRIPTION>
+        <URL>http://obchod.tld/mobily/mobilni-telefon-nk5678</URL>
+        <IMGURL>http://obchod.tld/imgs/mobilni-telefon-nk5678.jpg</IMGURL>
+        <PRICE>1000</PRICE>
+        <VAT>20</VAT>
+        <PRICE_VAT>1200</PRICE_VAT>
+        <DUES>20</DUES>
+        <DELIVERY_DATE>2</DELIVERY_DATE>
+        <ITEM_TYPE>new</ITEM_TYPE>
+        <MANUFACTURER>Nokia</MANUFACTURER>
+        <CATEGORIES>
+            <CATEGORY>Mobily | Dotykové</CATEGORY>
+            <CATEGORY>Hlavní kategorie 2 | Podřazená kategorie 2</CATEGORY>
+        </CATEGORIES>
+        <EAN>6417182041488</EAN>
+        <!-- volitelný -->
+        <CODE>NK5678</CODE>
+        <!-- <parameters>
+            <param>
+                <name>Fotoaparát</name>
+                <value>Ano</value>
+            </param>
+            <param>
+                <name>Hmotnost (g)</name>
+                <value>140</value>
+            </param>
+            <param>
+                <name>Výdrž (h)</name>
+                <value>190</value>
+            </param>
+            </parameters> -->
+        <VARIANTS>
+            <VARIANT>
+                <name_ext>Blue Edition</name_ext>
+                <url>http://obchod.tld/mobily/mobilni-telefon-nk5678-modry</url>
+                <imgurl>http://obchod.tld/imgs/mobilni-telefon-nk5678-blue.jpg</imgurl>
+            </VARIANT>
+            <VARIANT>
+                <name_ext>Gold Edition</name_ext>
+                <url>http://obchod.tld/mobily/mobilni-telefon-nk5678-zlaty</url>
+                <imgurl>http://obchod.tld/imgs/mobilni-telefon-nk5678-gold.jpg</imgurl>
+            </VARIANT>
+        </VARIANTS>
+        <PROPRIETARY>
+            <ZBOZICZ>
+                <TOLLFREE>1</TOLLFREE>
+                <FIRMY_CZ>1</FIRMY_CZ>
+                <SHOP_DEPOTS>111</SHOP_DEPOTS>
+            </ZBOZICZ>
+        </PROPRIETARY>
+    </ITEM>
+</SHOP>

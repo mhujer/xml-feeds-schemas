@@ -45,7 +45,7 @@
                             <td>
                                 <xsl:value-of select="jyxo:PRICE_VAT"/> ( <xsl:value-of
                                     select="jyxo:PRICE"/> bez DPH, Sazba DPH je <xsl:value-of
-                                    select="jyxo:PRICE_VAT"/> ) </td>
+                                    select="jyxo:VAT"/> ) </td>
                             <td>
                                 <xsl:value-of select="jyxo:DESCRIPTION"/>
                             </td>

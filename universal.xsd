@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:x-hujer:feed:universal"
+  xmlns="urn:x-hujer:feed:universal" elementFormDefault="qualified">
+  <xs:element name="SHOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ITEM" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="PRODUCTNAME" type="xs:string" minOccurs="0"/>
+              <xs:element name="PRODUCTNAMEEXT" type="xs:string" minOccurs="0"/>
+              <xs:element name="DESCRIPTION" type="xs:string"/>
+              <xs:element name="URL" type="xs:anyURI"/>
+              <xs:element name="IMGURL" type="xs:anyURI" minOccurs="0"/>
+              <xs:element name="PRICE" type="TYPE_PRICE_POSITIVE"/>
+              <xs:element name="VAT">
+                <xs:annotation>
+                  <xs:documentation>DPH v procentech, tedy např. 20%</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:decimal">
+                    <xs:minInclusive value="0"/>
+                    <xs:maxExclusive value="100"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRICE_VAT" type="TYPE_PRICE_POSITIVE"/>
+              <xs:element name="DUES" type="TYPE_PRICE" minOccurs="0"/>
+              <xs:element name="DELIVERY_DATE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:union>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:date"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:int">
+                        <xs:minInclusive value="-1"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="ihned"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:union>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEM_TYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="new"/>
+                    <xs:enumeration value="bazaar"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MANUFACTURER" type="xs:string" minOccurs="0"/>
+              <xs:element name="CATEGORIES">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="CATEGORY" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="EAN" type="TYPE_EAN13_CODE" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>kód výrobku EAN13, musí se jednat o validní kód včetně kontrolní
+                    číslice</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="CODE" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation> kód výrobku udávaný výrobcem, u knih např. ISBN. Neuvádějte zde
+                    vlastní kódy výrobků. </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="VARIANTS" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence maxOccurs="unbounded">
+                    <xs:element name="VARIANT">
+                      <!-- @todo -->
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PROPRIETARY">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="ZBOZICZ">
+                      <xs:complexType>
+                        <xs:all>
+                          <xs:element name="TOLLFREE" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:int">
+                                <xs:enumeration value="1"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="FIRMY_CZ" minOccurs="0">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:int">
+                                <xs:enumeration value="0"/>
+                                <xs:enumeration value="1"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="SHOP_DEPOTS" minOccurs="0" type="xs:string"/>
+                        </xs:all>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="TYPE_PRICE">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TYPE_PRICE_POSITIVE">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TYPE_EAN13_CODE">
+    <xs:restriction base="xs:double">
+      <xs:pattern value="\d{13}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
