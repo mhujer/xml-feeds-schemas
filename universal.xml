@@ -2,68 +2,152 @@
 <SHOP xmlns="urn:x-hujer:feed:universal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="urn:x-hujer:feed:universal universal.xsd">
     <ITEM>
-        <PRODUCT>Mobilní telefon NK5678</PRODUCT>
-        <DESCRIPTION>Klasický s plným dotykovým uživatelským rozhraním</DESCRIPTION>
-        <URL>http://obchod.tld/mobily/mobilni-telefon-nk5678</URL>
-        <IMGURL>http://obchod.tld/imgs/mobilni-telefon-nk5678.jpg</IMGURL>
-        <PRICE>1000</PRICE>
-        <VAT>20</VAT>
-        <PRICE_VAT>1200</PRICE_VAT>
-        <DUES>20</DUES>
-        <DELIVERY_DATE>2</DELIVERY_DATE>
-        <ITEM_TYPE>new</ITEM_TYPE>
-        <MANUFACTURER>Nokia</MANUFACTURER>
-        <CATEGORIES>
-            <CATEGORY>Mobily | Dotykové</CATEGORY>
-            <CATEGORY>Hlavní kategorie 2 | Podřazená kategorie 2</CATEGORY>
-        </CATEGORIES>
-        <EAN>6417182041488</EAN>
-        <CODE>NK5678</CODE>
-        <!-- <parameters>
-            <param>
-                <name>Fotoaparát</name>
-                <value>Ano</value>
-            </param>
-            <param>
-                <name>Hmotnost (g)</name>
-                <value>140</value>
-            </param>
-            <param>
-                <name>Výdrž (h)</name>
-                <value>190</value>
-            </param>
-            </parameters> -->
-        <VARIANTS>
-            <VARIANT>
-                <name_ext>Blue Edition</name_ext>
-                <url>http://obchod.tld/mobily/mobilni-telefon-nk5678-modry</url>
-                <imgurl>http://obchod.tld/imgs/mobilni-telefon-nk5678-blue.jpg</imgurl>
-            </VARIANT>
-            <VARIANT>
-                <name_ext>Gold Edition</name_ext>
-                <url>http://obchod.tld/mobily/mobilni-telefon-nk5678-zlaty</url>
-                <imgurl>http://obchod.tld/imgs/mobilni-telefon-nk5678-gold.jpg</imgurl>
-            </VARIANT>
-        </VARIANTS>
-        <PROPRIETARY>
-            <ZBOZICZ>
-                <TOLLFREE>1</TOLLFREE>
-                <FIRMY_CZ>1</FIRMY_CZ>
-                <SHOP_DEPOTS>111</SHOP_DEPOTS>
-            </ZBOZICZ>
-        </PROPRIETARY>
-    </ITEM>
-    <ITEM>
-        <PRODUCT>Pivní půllitr zelený 10</PRODUCT>
+        <PRODUCTNAME>Pivní půllitr zelený</PRODUCTNAME>
+        <PRODUCTNAMEEXT>10</PRODUCTNAMEEXT>
         <DESCRIPTION>Ručně foukaný pivní půllitr ze zeleného skla. Ideální dárek pro tátu, strejdu nebo kamaráda pivaře.</DESCRIPTION>
         <URL>http://www.pivnidarky.cz/p/pivni-pullitr-zeleny-10/</URL>
         <IMGURL>http://www.pivnidarky.cz/files/photos/original/0/0510d7800a67a400aa2857299b36a4a291c014cc.jpg</IMGURL>
         <PRICE>249.17</PRICE>
-        <DELIVERY_DATE>0</DELIVERY_DATE>
         <VAT>20</VAT>
         <PRICE_VAT>299.00</PRICE_VAT>
+        <DELIVERY_DATE>0</DELIVERY_DATE>
         <CATEGORIES>
             <CATEGORY>Pivní půllitry</CATEGORY>
         </CATEGORIES>
+        <PARAMETERS>
+            <PARAMETER>
+                <NAME>Materiál</NAME>
+                <VALUE>Sklo</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Výška (cm)</NAME>
+                <VALUE>20</VALUE>
+            </PARAMETER>
+        </PARAMETERS>
+    </ITEM>
+    <ITEM>
+        <PRODUCTNAME>Velká encyklopedie piva</PRODUCTNAME>
+        <DESCRIPTION>Autor: Berry Verhoef; Pivo patří k nejstarším nápojům na světě a pěnivý mok má početnou základnu svých příznivců. Pivo přichází na svět na venkovských statcích, v klášterech i v nadnárodních pivovarech. Způsob výroby tohoto nápoje, množství značek a pestrost jednotlivých piv Vám přiblíží tato kniha, která představuje významné evropské i americké výrobce a neopomíjí ani méně známé značky např. z Jižní Ameriky, Japonska a dalších zemí.</DESCRIPTION>
+        <URL>http://www.pivnidarky.cz/p/velka-encyklopedie-piva/</URL>
+        <IMGURL>http://www.pivnidarky.cz/files/photos/original/e/ec5c738bec1d109424773ef1cc10006fbb111866.jpg</IMGURL>
+        <PRICE>677</PRICE>
+        <VAT>10</VAT>
+        <PRICE_VAT>745</PRICE_VAT>
+        <DELIVERY_DATE>21</DELIVERY_DATE>
+        <CATEGORIES>
+            <CATEGORY>Pivní literatura</CATEGORY>
+        </CATEGORIES>
+    </ITEM>
+    <ITEM>
+        <PRODUCTNAME>Sada kovaných hracích kostek</PRODUCTNAME>
+        <DESCRIPTION>Sada šesti ručně kovaných hracích kostek se stylovým koženým váčkem. Tato ručně kovaná sada šesti kostek je inspirovaná zákazem francouzského krále Ludvíka IX. z roku 1256, který nechal po celé zemi vyhlásit, že  „Všem dílnám a kovárnám v našem království je zakázáno vyrábět kostky…“ Paradoxně ale samotný zákaz výroby kovaných kostek dokazuje jejich existenci. Sada šesti kostek je doplněná koženým váčkem a dodávaná v ručně vyráběné dárkové krabičce. Kostky lze využít i jako firemní dárek, protože si na dárkovou krabičku můžete nechat umístit libovolné logo či text.</DESCRIPTION>
+        <URL>http://market.medievum.cz/p/sada-kovanych-hracich-kostek/</URL>
+        <IMGURL>http://market.medievum.cz/files/photos/original/6/640ff58193b169b7c90ef538742a5f0b1585d9bf.jpg</IMGURL>
+        <PRICE>399</PRICE>
+        <VAT>20</VAT>
+        <PRICE_VAT>479</PRICE_VAT>
+        <DELIVERY_DATE>0</DELIVERY_DATE>
+        <CATEGORIES>
+            <CATEGORY>Dárky / Pro muže</CATEGORY>
+            <CATEGORY>Historické repliky / Hry</CATEGORY>
+            <CATEGORY>Dárky / Pro děti</CATEGORY>
+            <CATEGORY>Dárky / Kostky</CATEGORY>
+        </CATEGORIES>
+        <PARAMETERS>
+            <PARAMETER>
+                <NAME>Materiál</NAME>
+                <VALUE>Ocel, železo</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Délka výrobku (cm)</NAME>
+                <VALUE>1.2</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Výroba</NAME>
+                <VALUE>Ruční</VALUE>
+            </PARAMETER>
+        </PARAMETERS>
+    </ITEM>
+    <ITEM>
+        <PRODUCTNAME>Chateau Topolčianky - Cabernet Sauvignon rosé</PRODUCTNAME>
+        <PRODUCTNAMEEXT>pozdní sběr 2010</PRODUCTNAMEEXT>
+        <DESCRIPTION>Víno má jasně růžovou barvu s lososovým nádechem. Vůně je ovocná s tóny třešní, jahod a smetany. Chuť je lehká, ovocná s jemně nasládlým dozvukem.</DESCRIPTION>
+        <URL>http://www.wine-bar.cz/p/chateau-topolcianky-cabernet-sauvignon-rose-pozdni-sber-2010/</URL>
+        <IMGURL>http://www.wine-bar.cz/files/photos/original/a/ab03613b7db06c054a2967c761a712089d0dde92.jpg</IMGURL>
+        <PRICE>191</PRICE>
+        <VAT>20</VAT>
+        <PRICE_VAT>229</PRICE_VAT>
+        <DELIVERY_DATE>0</DELIVERY_DATE>
+        <CATEGORIES>
+            <CATEGORY>Růžové</CATEGORY>
+            <CATEGORY>Speciální nabídka</CATEGORY>
+        </CATEGORIES>
+        <PARAMETERS>
+            <PARAMETER>
+                <NAME>Barva</NAME>
+                <VALUE>Růžové</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Obsah alkoholu (v %)</NAME>
+                <VALUE>12</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Poznámka/Ocenění</NAME>
+                <VALUE>Stříbrná medaile Vinales internationales 2010 Paříž</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Obsah zbytkového cukru</NAME>
+                <VALUE>polosladké</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Obsah láhve (v l)</NAME>
+                <VALUE>0.75</VALUE>
+            </PARAMETER>
+        </PARAMETERS>
+    </ITEM>
+    <ITEM>
+        <PRODUCTNAME>Sjezdové lyže Sporten AHV 06 GS</PRODUCTNAME>
+        <DESCRIPTION>Sjezdové lyže SPORTEN AHV 06 GS jsou vysoce výkonné závodní a sportovní lyže pro výborné lyžaře, umožňují rychlou jízdu a delší oblouk.</DESCRIPTION>
+        <URL>http://www.lyzelyze.cz/zavodni-lyze/sporten-ahv-06-gs/</URL>
+        <IMGURL>http://www.lyzelyze.cz/files/photos/original/l/lyze-sporten-ahv-06-gs.jpg</IMGURL>
+        <PRICE>10521</PRICE>
+        <VAT>20</VAT>
+        <PRICE_VAT>12625</PRICE_VAT>
+        <DELIVERY_DATE>3</DELIVERY_DATE>
+        <MANUFACTURER>Sporten</MANUFACTURER>
+        <CATEGORIES>
+            <CATEGORY>Lyže sjezdové / Závodní lyže</CATEGORY>
+        </CATEGORIES>
+        <PARAMETERS>
+            <PARAMETER>
+                <NAME>Sezóna</NAME>
+                <VALUE>2010/2011</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Typ lyžaře</NAME>
+                <VALUE>Závodní lyžař</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Délka (cm)</NAME>
+                <VALUE>176</VALUE>
+                <VALUE>181</VALUE>
+                <VALUE>186</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Barva</NAME>
+                <VALUE>červeno-bílá</VALUE>
+            </PARAMETER>
+        </PARAMETERS>
+        <VARIANTS>
+            <VARIANT>
+                <PRODUCTNAMEEXT>Délka 176</PRODUCTNAMEEXT>
+            </VARIANT>
+            <VARIANT>
+                <PRODUCTNAMEEXT>Délka 183</PRODUCTNAMEEXT>
+            </VARIANT>
+            <VARIANT>
+                <PRODUCTNAMEEXT>Délka 186</PRODUCTNAMEEXT>
+            </VARIANT>
+        </VARIANTS>
     </ITEM>
 </SHOP>

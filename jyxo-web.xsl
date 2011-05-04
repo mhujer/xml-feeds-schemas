@@ -19,7 +19,7 @@
                         <th>Cena</th>
                         <th>Popis</th>
                         <th>EAN</th>
-                        <th>Datum doručení (ve dnech)</th>
+                        <th>Doba doručení (ve dnech)</th>
                         <th>Další informace</th>
                     </tr>
                     <xsl:for-each select="jyxo:SHOPITEM">
@@ -33,19 +33,21 @@
                                 </a>
                             </td>
                             <td>
-                                <img width="300">
-                                    <xsl:attribute name="src">
-                                        <xsl:value-of select="jyxo:IMGURL"/>
-                                    </xsl:attribute>
-                                </img>
+                                <div style="height: 150px">
+                                    <img style="max-height: 100%">
+                                        <xsl:attribute name="src">
+                                            <xsl:value-of select="jyxo:IMGURL"/>
+                                        </xsl:attribute>
+                                    </img>
+                                </div>
                             </td>
                             <td>
                                 <xsl:value-of select="jyxo:MANUFACTURER"/>
                             </td>
-                            <td>
-                                <xsl:value-of select="jyxo:PRICE_VAT"/> ( <xsl:value-of
-                                    select="jyxo:PRICE"/> bez DPH, Sazba DPH je <xsl:value-of
-                                    select="jyxo:VAT"/> ) </td>
+                            <td style="width: 200px;">
+                                <xsl:value-of select="jyxo:PRICE_VAT"/> (<xsl:value-of
+                                    select="jyxo:PRICE"/> bez DPH)<br/> (sazba DPH je <xsl:value-of
+                                    select="jyxo:VAT"/>) </td>
                             <td>
                                 <xsl:value-of select="jyxo:DESCRIPTION"/>
                             </td>
