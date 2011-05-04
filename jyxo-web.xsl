@@ -33,7 +33,7 @@
                                 </a>
                             </td>
                             <td>
-                                <img>
+                                <img width="300">
                                     <xsl:attribute name="src">
                                         <xsl:value-of select="jyxo:IMGURL"/>
                                     </xsl:attribute>

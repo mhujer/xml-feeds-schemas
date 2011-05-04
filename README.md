@@ -23,4 +23,4 @@ Cílem je zlepšit situaci kolem XML pro srovnávače zboží a zjednodušit jej
 - jednotlivých srovnávačům navrhnu zahrnutí schématu do popisu služby
 
 ### Zlepšit User-Experience při práci s feedy
-- vytvořím xsl transformace, které budou připojeny ke konečným XML - při zobrazení v browseru bude feed přehlednější
+- vytvořím xsl transformace, které mohou být připojeny ke stávajícím XML exportům pro jednotlivé srovnávače - při zobrazení v browseru bude feed přehlednější

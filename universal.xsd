@@ -7,6 +7,7 @@
         <xs:element name="ITEM" maxOccurs="unbounded">
           <xs:complexType>
             <xs:all>
+              <xs:element name="PRODUCT" type="xs:string"/>
               <xs:element name="PRODUCTNAME" type="xs:string" minOccurs="0"/>
               <xs:element name="PRODUCTNAMEEXT" type="xs:string" minOccurs="0"/>
               <xs:element name="DESCRIPTION" type="xs:string"/>
@@ -27,25 +28,16 @@
               <xs:element name="PRICE_VAT" type="TYPE_PRICE_POSITIVE"/>
               <xs:element name="DUES" type="TYPE_PRICE" minOccurs="0"/>
               <xs:element name="DELIVERY_DATE" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Počet dnů do expedice zásilky.</xs:documentation>
+                </xs:annotation>
                 <xs:simpleType>
-                  <xs:union>
-                    <xs:simpleType>
-                      <xs:restriction base="xs:date"/>
-                    </xs:simpleType>
-                    <xs:simpleType>
-                      <xs:restriction base="xs:int">
-                        <xs:minInclusive value="-1"/>
-                      </xs:restriction>
-                    </xs:simpleType>
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:enumeration value="ihned"/>
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:union>
+                  <xs:restriction base="xs:int">
+                    <xs:minInclusive value="-1"/>
+                  </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ITEM_TYPE">
+              <xs:element name="ITEM_TYPE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:enumeration value="new"/>
@@ -82,10 +74,10 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
-              <xs:element name="PROPRIETARY">
+              <xs:element name="PROPRIETARY" minOccurs="0">
                 <xs:complexType>
                   <xs:all>
-                    <xs:element name="ZBOZICZ">
+                    <xs:element name="ZBOZICZ" minOccurs="0">
                       <xs:complexType>
                         <xs:all>
                           <xs:element name="TOLLFREE" minOccurs="0">

@@ -11,11 +11,16 @@
       <xsl:for-each select="feed:ITEM">
         <SHOPITEM>
           <PRODUCT>
-            <xsl:value-of select="feed:PRODUCTNAME"/>
-            <xsl:if test="feed:PRODUCTNAMEEXT">
-              <xsl:text> </xsl:text>
-              <xsl:value-of select="feed:PRODUCTNAMEEXT"/>
-            </xsl:if>
+            <xsl:choose>
+              <xsl:when test="feed:PRODUCTNAME and feed:PRODUCTNAMEEXT">
+                <xsl:value-of select="feed:PRODUCTNAME"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="feed:PRODUCTNAMEEXT"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="feed:PRODUCT"/>
+              </xsl:otherwise>
+            </xsl:choose>
           </PRODUCT>
           <DESCRIPTION>
             <xsl:value-of select="feed:DESCRIPTION"/>

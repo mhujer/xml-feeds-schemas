@@ -2,8 +2,7 @@
 <SHOP xmlns="urn:x-hujer:feed:universal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="urn:x-hujer:feed:universal universal.xsd">
     <ITEM>
-        <PRODUCTNAME>Mobilní telefon NK5678</PRODUCTNAME>
-        <PRODUCTNAMEEXT>Doplnění</PRODUCTNAMEEXT>
+        <PRODUCT>Mobilní telefon NK5678</PRODUCT>
         <DESCRIPTION>Klasický s plným dotykovým uživatelským rozhraním</DESCRIPTION>
         <URL>http://obchod.tld/mobily/mobilni-telefon-nk5678</URL>
         <IMGURL>http://obchod.tld/imgs/mobilni-telefon-nk5678.jpg</IMGURL>
@@ -19,7 +18,6 @@
             <CATEGORY>Hlavní kategorie 2 | Podřazená kategorie 2</CATEGORY>
         </CATEGORIES>
         <EAN>6417182041488</EAN>
-        <!-- volitelný -->
         <CODE>NK5678</CODE>
         <!-- <parameters>
             <param>
@@ -54,5 +52,18 @@
                 <SHOP_DEPOTS>111</SHOP_DEPOTS>
             </ZBOZICZ>
         </PROPRIETARY>
+    </ITEM>
+    <ITEM>
+        <PRODUCT>Pivní půllitr zelený 10</PRODUCT>
+        <DESCRIPTION>Ručně foukaný pivní půllitr ze zeleného skla. Ideální dárek pro tátu, strejdu nebo kamaráda pivaře.</DESCRIPTION>
+        <URL>http://www.pivnidarky.cz/p/pivni-pullitr-zeleny-10/</URL>
+        <IMGURL>http://www.pivnidarky.cz/files/photos/original/0/0510d7800a67a400aa2857299b36a4a291c014cc.jpg</IMGURL>
+        <PRICE>249.17</PRICE>
+        <DELIVERY_DATE>0</DELIVERY_DATE>
+        <VAT>20</VAT>
+        <PRICE_VAT>299.00</PRICE_VAT>
+        <CATEGORIES>
+            <CATEGORY>Pivní půllitry</CATEGORY>
+        </CATEGORIES>
     </ITEM>
 </SHOP>
