@@ -15,38 +15,11 @@
               <xs:element name="URL" type="xs:anyURI"/>
               <xs:element name="IMGURL" type="xs:anyURI" minOccurs="0"/>
               <xs:element name="PRICE" type="gen:TYPE_PRICE_POSITIVE"/>
-              <xs:element name="VAT">
-                <xs:annotation>
-                  <xs:documentation>DPH v procentech, tedy např. 20%</xs:documentation>
-                </xs:annotation>
-                <xs:simpleType>
-                  <xs:restriction base="xs:decimal">
-                    <xs:minInclusive value="0"/>
-                    <xs:maxExclusive value="100"/>
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="VAT" type="gen:TYPE_VAT_INTEGER"/>
               <xs:element name="PRICE_VAT" type="gen:TYPE_PRICE_POSITIVE"/>
               <xs:element name="DUES" type="gen:TYPE_PRICE" minOccurs="0"/>
-              <xs:element name="DELIVERY_DATE" minOccurs="0">
-                <xs:annotation>
-                  <xs:documentation>Počet dnů do expedice zásilky. -1 je neznámá
-                    doba.</xs:documentation>
-                </xs:annotation>
-                <xs:simpleType>
-                  <xs:restriction base="xs:int">
-                    <xs:minInclusive value="-1"/>
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="ITEM_TYPE" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:enumeration value="new"/>
-                    <xs:enumeration value="bazaar"/>
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="DELIVERY_DATE" type="gen:TYPE_DELIVERY_DATE" minOccurs="0"/>
+              <xs:element name="ITEM_TYPE" minOccurs="0" type="gen:TYPE_ITEM_TYPE"/>
               <xs:element name="MANUFACTURER" type="xs:string" minOccurs="0"/>
               <xs:element name="CATEGORIES" minOccurs="0">
                 <xs:complexType>
@@ -56,13 +29,7 @@
                 </xs:complexType>
               </xs:element>
               <xs:element name="EAN" type="gen:TYPE_EAN13_CODE" minOccurs="0"/>
-              <xs:element name="CODE" type="xs:string" minOccurs="0">
-                <xs:annotation>
-                  <xs:documentation> kód výrobku udávaný výrobcem, u knih např. ISBN. Neuvádějte zde
-                    vlastní kódy výrobků. </xs:documentation>
-                </xs:annotation>
-              </xs:element>
-
+              <xs:element name="CODE" type="gen:TYPE_CODE" minOccurs="0"/>
               <xs:element name="PARAMETERS" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence maxOccurs="unbounded">
@@ -81,7 +48,32 @@
                 <xs:complexType>
                   <xs:sequence maxOccurs="unbounded">
                     <xs:element name="VARIANT">
-                      <!-- @todo -->
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PRODUCTNAME" type="xs:string"/>
+                          <xs:element name="PRODUCTNAMEEXT" type="xs:string" minOccurs="0"/>
+                          <xs:element name="DESCRIPTION" type="xs:string"/>
+                          <xs:element name="URL" type="xs:anyURI"/>
+                          <xs:element name="IMGURL" type="xs:anyURI" minOccurs="0"/>
+                          <xs:element name="PRICE" type="gen:TYPE_PRICE_POSITIVE"/>
+                          <xs:element name="VAT" type="gen:TYPE_VAT_INTEGER"/>
+                          <xs:element name="PRICE_VAT" type="gen:TYPE_PRICE_POSITIVE"/>
+                          <xs:element name="DUES" type="gen:TYPE_PRICE" minOccurs="0"/>
+                          <xs:element name="DELIVERY_DATE" type="gen:TYPE_DELIVERY_DATE"
+                            minOccurs="0"/>
+                          <xs:element name="ITEM_TYPE" minOccurs="0" type="gen:TYPE_ITEM_TYPE"/>
+                          <xs:element name="MANUFACTURER" type="xs:string" minOccurs="0"/>
+                          <xs:element name="CATEGORIES" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence maxOccurs="unbounded">
+                                <xs:element name="CATEGORY" type="xs:string"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="EAN" type="gen:TYPE_EAN13_CODE" minOccurs="0"/>
+                          <xs:element name="CODE" type="gen:TYPE_CODE" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
                     </xs:element>
                   </xs:sequence>
                 </xs:complexType>

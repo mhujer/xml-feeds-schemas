@@ -31,4 +31,34 @@
             <xs:minInclusive value="1234567890123"/>
         </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="TYPE_VAT_INTEGER">
+        <xs:annotation>
+            <xs:documentation>DPH v procentech, tedy např. 20%</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxExclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TYPE_ITEM_TYPE">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="new"/>
+            <xs:enumeration value="bazaar"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TYPE_DELIVERY_DATE">
+        <xs:annotation>
+            <xs:documentation>Počet dnů do expedice zásilky. -1 je neznámá doba.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="-1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TYPE_CODE">
+        <xs:annotation>
+            <xs:documentation> kód výrobku udávaný výrobcem, u knih např. ISBN. Neuvádějte zde
+                vlastní kódy výrobků. </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string"> </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
