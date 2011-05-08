@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:x-hujer:feed:generic"
+    xmlns="urn:x-hujer:feed:generic" elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation>Generické datové typy společné pro všechny zbožové
+            feedy</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType name="TYPE_PRICE">
+        <xs:annotation>
+            <xs:documentation>Cena jako desetinné číslo. Může být nulová.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TYPE_PRICE_POSITIVE">
+        <xs:annotation>
+            <xs:documentation>Cena jako desetinné číslo. Větší než nula.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TYPE_EAN13_CODE">
+        <xs:annotation>
+            <xs:documentation>Platný EAN13 kód výrobku. Musí se jednat o validní kód včetně
+                kontrolní číslice</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:double">
+            <xs:pattern value="\d{13}"/>
+            <xs:minInclusive value="1234567890123"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
