@@ -4,6 +4,10 @@
   xmlns="urn:x-hujer:feed:jyxo" xmlns:feed="urn:x-hujer:feed:jyxo" elementFormDefault="qualified"
   xmlns:gen="urn:x-hujer:feed:generic">
   <xs:import namespace="urn:x-hujer:feed:generic" schemaLocation="generic.xsd"/>
+  <xs:annotation>
+    <xs:documentation>Schéma pro XML formát pro srovnávač vybereme.cz (jyxo). Více informací o
+      formátu na http://admin.vybereme.cz/format-xml-feedu</xs:documentation>
+  </xs:annotation>
   <xs:element name="SHOP">
     <xs:complexType>
       <xs:sequence>
@@ -45,9 +49,23 @@
                     zboží).</xs:documentation>
                 </xs:annotation>
               </xs:element>
-              <xs:element name="IMGURL" type="xs:anyURI" minOccurs="0"/>
-              <xs:element name="PRICE" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE"/>
-              <xs:element name="PRICE_VAT" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE"/>
+              <xs:element name="IMGURL" type="xs:anyURI" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Odkaz na obrázek výrobku.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="PRICE" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE">
+                <xs:annotation>
+                  <xs:documentation>Cena v Kč bez DPH. Pro slovenské obchody cena v
+                    EUR</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="PRICE_VAT" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE">
+                <xs:annotation>
+                  <xs:documentation>Cena v Kč s DPH. Pro slovenské obchody cena v
+                    EUR</xs:documentation>
+                </xs:annotation>
+              </xs:element>
               <xs:element name="VAT" minOccurs="0">
                 <xs:simpleType>
                   <xs:union>
