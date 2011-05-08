@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:sch="http://purl.oclc.org/dsdl/schematron" targetNamespace="urn:x-hujer:feed:jyxo"
-  xmlns="urn:x-hujer:feed:jyxo" elementFormDefault="qualified">
+  xmlns="urn:x-hujer:feed:jyxo" xmlns:feed="urn:x-hujer:feed:jyxo" elementFormDefault="qualified"
+  xmlns:gen="urn:x-hujer:feed:generic">
+  <xs:import namespace="urn:x-hujer:feed:generic" schemaLocation="generic.xsd"/>
   <xs:element name="SHOP">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="SHOPITEM" maxOccurs="unbounded">
           <xs:annotation>
-            <!-- @todo - proč nejde? -->
             <xs:appinfo>
-              <sch:pattern name="Je správně zadaná DPH?">
-                <sch:rule context="SHOPITEM">
-                  <sch:assert test="TEST">AA</sch:assert>
-                  <sch:report test="TEST">AA</sch:report>
+              <sch:ns uri="urn:x-hujer:feed:jyxo" prefix="feed"/>
+              <sch:pattern name="PRICE_VAT je nepovinné, pokud jsou vyplněn PRICE a VAT">
+                <sch:rule context="feed:SHOPITEM">
+                  <sch:report test="(not(feed:PRICE) or not(feed:VAT)) and not(feed:PRICE_VAT)">Není
+                    zadáno PRICE_VAT ani PRICE a VAT</sch:report>
                 </sch:rule>
               </sch:pattern>
             </xs:appinfo>
@@ -26,17 +28,26 @@
                 </xs:annotation>
               </xs:element>
               <xs:element name="DESCRIPTION">
+                <xs:annotation>
+                  <xs:documentation>popis výrobku či služby (délka maximálně 1024 znaků, bez HTML
+                    značek, HTML entit a formátování)</xs:documentation>
+                </xs:annotation>
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1024"/>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="URL" type="xs:anyURI"/>
+              <xs:element name="URL" type="xs:anyURI">
+                <xs:annotation>
+                  <xs:documentation>Odkaz na stránku s nabídkou daného výrobku či služby (unikátní v
+                    rámci feedu, tj. každé zboží má URL odlišné od URL ostatního
+                    zboží).</xs:documentation>
+                </xs:annotation>
+              </xs:element>
               <xs:element name="IMGURL" type="xs:anyURI" minOccurs="0"/>
-              <!-- @todo check PRICE/PRICE_VAT/VAT with Schematron! -->
-              <xs:element name="PRICE" minOccurs="0" type="TYPE_PRICE_POSITIVE"/>
-              <xs:element name="PRICE_VAT" minOccurs="0" type="TYPE_PRICE_POSITIVE"/>
+              <xs:element name="PRICE" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE"/>
+              <xs:element name="PRICE_VAT" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE"/>
               <xs:element name="VAT" minOccurs="0">
                 <xs:simpleType>
                   <xs:union>
@@ -58,14 +69,10 @@
                   <xs:documentation>Jméno výrobce produktu.</xs:documentation>
                 </xs:annotation>
               </xs:element>
-              <xs:element name="EAN" type="TYPE_EAN13_CODE" minOccurs="0">
-                <xs:annotation>
-                  <xs:documentation>validní kód výrobku EAN13</xs:documentation>
-                </xs:annotation>
-              </xs:element>
+              <xs:element name="EAN" type="gen:TYPE_EAN13_CODE" minOccurs="0"/>
               <xs:element name="DELIVERY_DATE" minOccurs="0">
                 <xs:annotation>
-                  <xs:documentation>dodací doba zboží ve dnech</xs:documentation>
+                  <xs:documentation>Dodací doba zboží ve dnech</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
                   <xs:union>
@@ -85,33 +92,23 @@
                   </xs:union>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ITEM_TYPE" minOccurs="0">
+              <xs:element name="ITEM_TYPE" minOccurs="0" type="gen:TYPE_ITEM_TYPE">
                 <xs:annotation>
                   <xs:documentation>Pokud je daná položka bazarová, uveďte jako hodnotu bazaar.
                     Jinak můžete tuto položku vypustit.</xs:documentation>
                 </xs:annotation>
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:enumeration value="new"/>
-                    <xs:enumeration value="bazaar"/>
-                  </xs:restriction>
-                </xs:simpleType>
               </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
+    <xs:unique name="url-je-ve-feedu-unikatni">
+      <xs:annotation>
+        <xs:documentation>URL produktu musí být v rámci feedu unikátní</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="feed:SHOPITEM"/>
+      <xs:field xpath="feed:URL"/>
+    </xs:unique>
   </xs:element>
-  <xs:simpleType name="TYPE_PRICE_POSITIVE">
-    <xs:restriction base="xs:decimal">
-      <xs:minExclusive value="0"/>
-      <xs:fractionDigits value="4"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="TYPE_EAN13_CODE">
-    <xs:restriction base="xs:int">
-      <xs:totalDigits value="13"/>
-    </xs:restriction>
-  </xs:simpleType>
 </xs:schema>

@@ -3,9 +3,7 @@
   xmlns:feed="urn:x-hujer:feed:universal">
   <xsl:output method="xml" indent="yes"/>
   <xsl:template match="/feed:SHOP">
-    <xsl:text disable-output-escaping="yes">
-<![CDATA[<?xml-stylesheet type="text/xsl" href="jyxo-web.xsl"?>]]>
-</xsl:text>
+    <xsl:processing-instruction name="xml-stylesheet">type="text/xsl" href="jyxo-web.xsl"</xsl:processing-instruction>
     <SHOP xmlns="urn:x-hujer:feed:jyxo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="urn:x-hujer:feed:jyxo jyxo.xsd">
       <xsl:for-each select="feed:ITEM">
