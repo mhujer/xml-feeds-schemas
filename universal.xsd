@@ -50,18 +50,18 @@
                     <xs:element name="VARIANT">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="PRODUCTNAME" type="xs:string"/>
+                          <xs:element name="PRODUCTNAME" type="xs:string" minOccurs="0"/>
                           <xs:element name="PRODUCTNAMEEXT" type="xs:string" minOccurs="0"/>
-                          <xs:element name="DESCRIPTION" type="xs:string"/>
-                          <xs:element name="URL" type="xs:anyURI"/>
+                          <xs:element name="DESCRIPTION" type="xs:string" minOccurs="0"/>
+                          <xs:element name="URL" type="xs:anyURI" minOccurs="0"/>
                           <xs:element name="IMGURL" type="xs:anyURI" minOccurs="0"/>
-                          <xs:element name="PRICE" type="gen:TYPE_PRICE_POSITIVE"/>
-                          <xs:element name="VAT" type="gen:TYPE_VAT_INTEGER"/>
-                          <xs:element name="PRICE_VAT" type="gen:TYPE_PRICE_POSITIVE"/>
+                          <xs:element name="PRICE" type="gen:TYPE_PRICE_POSITIVE" minOccurs="0"/>
+                          <xs:element name="VAT" type="gen:TYPE_VAT_INTEGER" minOccurs="0"/>
+                          <xs:element name="PRICE_VAT" type="gen:TYPE_PRICE_POSITIVE" minOccurs="0"/>
                           <xs:element name="DUES" type="gen:TYPE_PRICE" minOccurs="0"/>
                           <xs:element name="DELIVERY_DATE" type="gen:TYPE_DELIVERY_DATE"
                             minOccurs="0"/>
-                          <xs:element name="ITEM_TYPE" minOccurs="0" type="gen:TYPE_ITEM_TYPE"/>
+                          <xs:element name="ITEM_TYPE" type="gen:TYPE_ITEM_TYPE" minOccurs="0"/>
                           <xs:element name="MANUFACTURER" type="xs:string" minOccurs="0"/>
                           <xs:element name="CATEGORIES" minOccurs="0">
                             <xs:complexType>
