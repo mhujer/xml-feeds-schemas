@@ -10,11 +10,15 @@
         <PRICE>249.17</PRICE>
         <VAT>20</VAT>
         <PRICE_VAT>299.00</PRICE_VAT>
-        <DELIVERY_DATE>0</DELIVERY_DATE>
+        <DUES>50</DUES>
+        <DELIVERY_DATE>10</DELIVERY_DATE>
+        <ITEM_TYPE>bazaar</ITEM_TYPE>
+        <MANUFACTURER>MANUFACTURER0</MANUFACTURER>
         <CATEGORIES>
             <CATEGORY>Pivní půllitry</CATEGORY>
         </CATEGORIES>
         <EAN>1234567890123</EAN>
+        <CODE>CODE0</CODE>
         <PARAMETERS>
             <PARAMETER>
                 <NAME>Materiál</NAME>
@@ -25,6 +29,13 @@
                 <VALUE>20</VALUE>
             </PARAMETER>
         </PARAMETERS>
+        <PROPRIETARY>
+            <ZBOZICZ>
+                <TOLLFREE>1</TOLLFREE>
+                <FIRMY_CZ>0</FIRMY_CZ>
+                <SHOP_DEPOTS>SHOP_DEPOTS0</SHOP_DEPOTS>
+            </ZBOZICZ>
+        </PROPRIETARY>
     </ITEM>
     <ITEM>
         <PRODUCTNAME>Velká encyklopedie piva</PRODUCTNAME>

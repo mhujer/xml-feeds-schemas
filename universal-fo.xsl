@@ -2,6 +2,9 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:feed="urn:x-hujer:feed:universal" xml:lang="cs">
 
+  <!-- nemají se používat obrázky? -->
+  <xsl:param name="dont_use_images"/>
+
   <xsl:output method="xml" encoding="utf-8"/>
 
   <xsl:attribute-set name="bunka">
@@ -70,10 +73,15 @@
         <xsl:apply-templates select="feed:IMGURL"/>
         <xsl:apply-templates select="feed:PRICE_VAT"/>
         <xsl:apply-templates select="feed:EAN"/>
-        <!-- delivery -->
-        <fo:block text-align="justify" hyphenate="true">
+        <xsl:apply-templates select="feed:CODE"/>
+        <xsl:apply-templates select="feed:DELIVERY_DATE"/>
+        <xsl:apply-templates select="feed:MANUFACTURER"/>
+        <fo:block text-align="justify" hyphenate="true" margin-top="5pt" margin-bottom="5pt">
           <xsl:value-of select="feed:DESCRIPTION"/>
         </fo:block>
+
+        <xsl:apply-templates select="feed:ITEM_TYPE"/>
+
         <xsl:apply-templates select="feed:CATEGORIES"/>
 
         <fo:block clear="both"/>
@@ -91,10 +99,16 @@
     <fo:float float="right">
       <fo:block max-width="100pt" max-height="100pt" margin-left="5pt" margin-right="5pt"
         margin-bottom="5pt">
-        <!--<fo:block width="100pt" height="100pt" border="1pt solid black">IMG</fo:block>-->
-        <fo:external-graphic content-width="100pt" content-height="100pt">
-          <xsl:attribute name="src">url(<xsl:value-of select="."/>)</xsl:attribute>
-        </fo:external-graphic>
+        <xsl:choose>
+          <xsl:when test="$dont_use_images = '1'">
+            <fo:block width="100pt" height="100pt" border="1pt solid black">IMG</fo:block>
+          </xsl:when>
+          <xsl:otherwise>
+            <fo:external-graphic content-width="100pt" content-height="100pt">
+              <xsl:attribute name="src">url(<xsl:value-of select="."/>)</xsl:attribute>
+            </fo:external-graphic>
+          </xsl:otherwise>
+        </xsl:choose>
       </fo:block>
     </fo:float>
   </xsl:template>
@@ -106,9 +120,40 @@
     </fo:block>
   </xsl:template>
 
+  <xsl:template match="feed:CODE">
+    <fo:block>
+      <fo:inline font-weight="bold">Kód produktu: </fo:inline>
+      <xsl:value-of select="."/>
+    </fo:block>
+  </xsl:template>
+
+  <xsl:template match="feed:DELIVERY_DATE">
+    <fo:block>
+      <fo:inline font-weight="bold"> Doručení je možné <xsl:choose>
+          <xsl:when test=". = 0">ihned</xsl:when>
+          <xsl:otherwise>za <xsl:value-of select="."/> dní</xsl:otherwise>
+        </xsl:choose>
+      </fo:inline>
+    </fo:block>
+  </xsl:template>
+
+  <xsl:template match="feed:ITEM_TYPE">
+    <xsl:if test=". = 'bazaar'">
+      <fo:block font-style="italic">Zboží je bazarové</fo:block>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template match="feed:MANUFACTURER">
+    <fo:block>
+      <fo:inline font-weight="bold">Výrobce: </fo:inline>
+      <xsl:value-of select="."/>
+    </fo:block>
+  </xsl:template>
+
   <xsl:template match="feed:PRICE_VAT">
     <fo:block font-size="130%" font-weight="bold" margin-bottom="5pt">
-      <xsl:value-of select="."/> Kč (<xsl:value-of select="../feed:PRICE"/> Kč bez DPH)</fo:block>
+      <xsl:value-of select="."/>&#160;Kč (<xsl:value-of select="../feed:PRICE"/>&#160;Kč bez DPH<xsl:if
+        test="../feed:DUES">, další poplatky: <xsl:value-of select="../feed:DUES"/>&#160;Kč</xsl:if>)</fo:block>
   </xsl:template>
 
   <xsl:template match="feed:CATEGORIES">
@@ -147,9 +192,7 @@
           </xsl:for-each>
         </fo:table-body>
       </fo:table>
-
     </fo:block>
   </xsl:template>
-
 
 </xsl:stylesheet>
