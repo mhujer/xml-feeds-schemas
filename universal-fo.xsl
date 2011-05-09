@@ -13,16 +13,16 @@
   </xsl:attribute-set>
 
   <xsl:template match="/">
-    <fo:root>
+    <fo:root language="cs">
       <!-- Definice layoutu stránky -->
       <fo:layout-master-set>
         <!-- Rozměry stránky a její okraje -->
         <fo:simple-page-master master-name="my-page" page-height="297mm" page-width="210mm"
-          margin="1in">
+          margin="0.75in">
           <!-- Tiskové zrcadlo - oblast pro samotný obsah stránky -->
           <fo:region-body margin-bottom="15mm"/>
           <!-- Oblast pro patu stránky -->
-          <fo:region-after extent="10mm"/>
+          <fo:region-after extent="10mm" padding-top="20mm"/>
         </fo:simple-page-master>
       </fo:layout-master-set>
 
@@ -30,15 +30,18 @@
       <fo:page-sequence master-reference="my-page">
         <!-- Společný obsah všech stránek v patě stránky -->
         <fo:static-content flow-name="xsl-region-after">
-          <fo:block>
+          <fo:block text-align-last="justify" clear="both">
+            <fo:leader leader-pattern="rule" color="grey"/>
+          </fo:block>
+          <fo:block text-align="center">
             <xsl:text>Strana </xsl:text>
-            <fo:page-number/>
+            <fo:page-number/> / <fo:page-number-citation ref-id="last-page"/>
           </fo:block>
         </fo:static-content>
         <!-- Samotný text dokumentu -->
         <fo:flow flow-name="xsl-region-body">
           <fo:block font-size="300%" font-weight="bold">Feed produktů</fo:block>
-          <fo:block font-size="80%">
+          <fo:block font-size="80%" page-break-after="always">
             <fo:block font-size="150%">Obsah:</fo:block>
             <xsl:for-each select="/feed:SHOP/feed:ITEM">
               <fo:block text-align-last="justify">
@@ -55,6 +58,7 @@
           <fo:block>
             <xsl:apply-templates/>
           </fo:block>
+          <fo:block id="last-page"/>
         </fo:flow>
       </fo:page-sequence>
     </fo:root>
@@ -62,7 +66,7 @@
 
   <xsl:template match="feed:ITEM">
     <fo:block margin-bottom="10pt" keep-together.within-page="always" id="{generate-id()}"
-      language="cs">
+      keep-with-next="always">
       <fo:block font-size="200%" font-weight="bold">
         <xsl:value-of select="feed:PRODUCTNAME"/>
         <xsl:text> </xsl:text>
@@ -76,21 +80,15 @@
         <xsl:apply-templates select="feed:CODE"/>
         <xsl:apply-templates select="feed:DELIVERY_DATE"/>
         <xsl:apply-templates select="feed:MANUFACTURER"/>
-        <fo:block text-align="justify" hyphenate="true" margin-top="5pt" margin-bottom="5pt">
+        <fo:block text-align="justify" hyphenate="true" margin-top="5pt">
           <xsl:value-of select="feed:DESCRIPTION"/>
         </fo:block>
-
         <xsl:apply-templates select="feed:ITEM_TYPE"/>
-
         <xsl:apply-templates select="feed:CATEGORIES"/>
 
         <fo:block clear="both"/>
+
         <xsl:apply-templates select="feed:PARAMETERS"/>
-
-        <xsl:if test="following-sibling::feed:ITEM">
-          <fo:block border-bottom="1px dashed grey" margin-top="10pt" margin-bottom="10pt"/>
-        </xsl:if>
-
       </fo:block>
     </fo:block>
   </xsl:template>
@@ -139,7 +137,7 @@
 
   <xsl:template match="feed:ITEM_TYPE">
     <xsl:if test=". = 'bazaar'">
-      <fo:block font-style="italic">Zboží je bazarové</fo:block>
+      <fo:block font-style="italic" margin-top="5pt">Zboží je bazarové</fo:block>
     </xsl:if>
   </xsl:template>
 
@@ -152,8 +150,9 @@
 
   <xsl:template match="feed:PRICE_VAT">
     <fo:block font-size="130%" font-weight="bold" margin-bottom="5pt">
-      <xsl:value-of select="."/>&#160;Kč (<xsl:value-of select="../feed:PRICE"/>&#160;Kč bez DPH<xsl:if
-        test="../feed:DUES">, další poplatky: <xsl:value-of select="../feed:DUES"/>&#160;Kč</xsl:if>)</fo:block>
+      <xsl:value-of select="."/>&#160;Kč (<xsl:value-of select="../feed:PRICE"/>&#160;Kč bez
+        DPH<xsl:if test="../feed:DUES">, další poplatky: <xsl:value-of select="../feed:DUES"
+        />&#160;Kč</xsl:if>)</fo:block>
   </xsl:template>
 
   <xsl:template match="feed:CATEGORIES">
