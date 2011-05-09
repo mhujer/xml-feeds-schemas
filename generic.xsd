@@ -26,9 +26,10 @@
             <xs:documentation>Platný EAN13 kód výrobku. Musí se jednat o validní kód včetně
                 kontrolní číslice</xs:documentation>
         </xs:annotation>
-        <xs:restriction base="xs:double">
+        <xs:restriction base="xs:long">
             <xs:pattern value="\d{13}"/>
-            <xs:minInclusive value="1234567890123"/>
+            <xs:minInclusive value="1000000000000"/>
+            <xs:maxInclusive value="9999999999999"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="TYPE_VAT_INTEGER">
