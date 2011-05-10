@@ -84,6 +84,28 @@
                 <para>Vytvořil jsem XSL tranformace v souborech <filename>jyxo.xsl</filename> a
                         <filename>zbozi.xsl</filename>, které převedou data z univerzálního feedu fo
                     formátu pro příslušné srovnávače.</para>
+                <sect4>
+                    <title>PHP</title>
+                    <para>Transformace je možné provést přímo z PHP:</para>
+                    <programlisting language="php"><![CDATA[<?php
+generate('../jyxo.xsl', 'jyxo-out.xml');
+generate('../zbozi.xsl', 'zbozi-out.xml');
+
+function generate($inputTransformation, $outputFile)
+{
+    $xml = new DOMDocument;
+    $xml->load('../universal.xml');
+
+    $xsl = new DOMDocument;
+    $xsl->load($inputTransformation);
+
+    $proc = new XSLTProcessor();
+    $proc->importStylesheet($xsl);
+    $newXml = $proc->transformToXML($xml);
+    file_put_contents($outputFile, $newXml);
+}]]></programlisting>
+                    <para>Kód je k dispozici v souboru <filename>php/transform.php</filename>.</para>
+                </sect4>
             </sect3>
         </sect2>
         <sect2>

@@ -109,9 +109,11 @@
             <xsl:for-each select="feed:VARIANTS/feed:VARIANT">
               <VARIANT>
                 <xsl:for-each select="./child::node()">
-                  <xsl:element name="{name(.)}">
-                    <xsl:value-of select="."/>  
-                  </xsl:element>
+                  <xsl:if test="string-length(name(.)) > 0">
+                    <xsl:element name="{name(.)}">
+                      <xsl:value-of select="."/>
+                    </xsl:element>
+                  </xsl:if>
                 </xsl:for-each>
               </VARIANT>
             </xsl:for-each>
