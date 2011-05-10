@@ -14,20 +14,35 @@
 
   <xsl:template match="/">
     <fo:root language="cs">
-      <!-- Definice layoutu stránky -->
+      <!-- Definice layoutu stránek -->
       <fo:layout-master-set>
+        <!-- Definice layoutu první stránky bez zápatí -->
+        <fo:simple-page-master master-name="prvni" page-height="297mm" page-width="210mm"
+          margin="1in">
+          <!-- Tiskové zrcadlo - oblast pro samotný obsah stránky -->
+          <fo:region-body margin-bottom="15mm"/>
+        </fo:simple-page-master>
+
         <!-- Rozměry stránky a její okraje -->
-        <fo:simple-page-master master-name="my-page" page-height="297mm" page-width="210mm"
+        <fo:simple-page-master master-name="normalni" page-height="297mm" page-width="210mm"
           margin="0.75in">
           <!-- Tiskové zrcadlo - oblast pro samotný obsah stránky -->
           <fo:region-body margin-bottom="15mm"/>
           <!-- Oblast pro patu stránky -->
           <fo:region-after extent="10mm" padding-top="20mm"/>
         </fo:simple-page-master>
+
+        <fo:page-sequence-master master-name="katalog">
+          <fo:repeatable-page-master-alternatives>
+            <fo:conditional-page-master-reference master-reference="prvni" page-position="first"/>
+            <fo:conditional-page-master-reference master-reference="normalni" page-position="any"/>
+          </fo:repeatable-page-master-alternatives>
+        </fo:page-sequence-master>
+
       </fo:layout-master-set>
 
       <!-- Definice obsahu stránky -->
-      <fo:page-sequence master-reference="my-page">
+      <fo:page-sequence master-reference="katalog">
         <!-- Společný obsah všech stránek v patě stránky -->
         <fo:static-content flow-name="xsl-region-after">
           <fo:block text-align-last="justify" clear="both">
