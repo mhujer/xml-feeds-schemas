@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" type="xml"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.0" xml:lang="cs">
+    <info>
+        <title>Schémata a transformace pro srovnávače zboží</title>
+        <subtitle>Semestrální práce z předmětu 4IZ238</subtitle>
+        <author>
+            <personname>Martin Hujer</personname>
+            <email>mhujer@gmail.com</email>
+            <uri>http://www.martinhujer.cz</uri>
+            <uri>https://github.com/mhujer/xml-feeds-schemas</uri>
+        </author>
+    </info>
+    <sect1>
+        <title>Úvod</title>
+        <para>Cílem práce je zlepšit situaci kolem XML pro srovnávače zboží a zjednodušit jejich
+            generování.</para>
+        <sect2>
+            <title>Stávající situace</title>
+            <orderedlist>
+                <listitem>
+                    <para>Každý zbožový srovnávač má svůj formát feedu <itemizedlist>
+                            <listitem>
+                                <para>Specifikace Zboží.cz -
+                                        <uri>http://napoveda.seznam.cz/cz/specifikace-xml.html</uri></para>
+                            </listitem>
+                            <listitem>
+                                <para>Specifikace Heureka.cz
+                                        <uri>http://sluzby.heureka.cz/napoveda/import/</uri></para>
+                            </listitem>
+                            <listitem>
+                                <para>Jyxo srovnávač
+                                        <uri>http://admin.vybereme.cz/format-xml-feedu</uri></para>
+                            </listitem>
+                        </itemizedlist></para>
+                </listitem>
+                <listitem>
+                    <para>Jejich XMLka nemají definované schéma - nedá se poznat, zda export z
+                        eshopu je OK</para>
+                </listitem>
+                <listitem>
+                    <para>Je spoustu práce s generováním validních feedů pro různé srovnávače</para>
+                </listitem>
+            </orderedlist>
+        </sect2>
+    </sect1>
+    <sect1>
+        <title>Cíle práce</title>
+        <sect2>
+            <title>Zjednodušit generování feedů pro srovnávače</title>
+            <para>Vytvořením universálního XML formátu pro exporty zboží pro srovnávače</para>
+            <para>Vytvořením transformací, které z jednoho XML vytvoří XML pro jednotlivé
+                srovnávače</para>
+        </sect2>
+        <sect2>
+            <title>Snížit množství chyb při vytváření feedů</title>
+            <para>Vytvořením schémat pro jednotlivé srovnávače (podle jejich textového popisu XML
+                feedu)</para>
+            <para>Jednotlivých srovnávačům navrhnu zahrnutí schématu do popisu služby</para>
+        </sect2>
+        <sect2>
+            <title>Zlepšit User-Experience při práci s feedy</title>
+            <para>Vytvořením xsl transformací, které mohou být připojeny ke stávajícím XML exportům
+                pro jednotlivé srovnávače - při zobrazení v browseru bude feed přehlednější</para>
+        </sect2>
+    </sect1>
+    <sect1>
+        <title>Výstupy práce</title>
+        <sect2>
+            <title>Univerzální XML feed</title>
+            <para>Vytvořil jsem formát pro uložení informací o produktech, který obsahuje nadmnožinu
+                informací o produktech v jednotlivých feedech. Ukázkový soubor s daty je
+                    <filename>universal.xml</filename>. Jeho schéma je uloženo v souborech
+                    <filename>universal.xsd</filename> a <filename>generic.xsd</filename>.</para>
+            <sect3>
+                <title>Tiskový výstup</title>
+                <para>Z univerzálního XML je možné pomocí transformace v souboru
+                        <filename>universal-fo.xsl</filename> vygenerovat PDF s tiskovým
+                    výstupem.</para>
+            </sect3>
+            <sect3>
+                <title>Transformace pro jednotlivé srovnávače</title>
+                <para>Vytvořil jsem XSL tranformace v souborech <filename>jyxo.xsl</filename> a
+                        <filename>zbozi.xsl</filename>, které převedou data z univerzálního feedu fo
+                    formátu pro příslušné srovnávače.</para>
+            </sect3>
+        </sect2>
+        <sect2>
+            <title>Schémata pro jednotlivé formáty</title>
+            <para>Vytvořil jsem schémata <filename>jyxo.xsd</filename> a
+                    <filename>zbozi.xsd</filename>, která jsou převedením textového popisu formátu
+                jednotlivých služeb do XML schématu, které lze využít pro automatickou validaci
+                vygenerovaného XML.</para>
+        </sect2>
+        <sect2>
+            <title>XSL transformace pro zobrazení v prohlížeči</title>
+            <para>Vytvořil jsem tranformace <filename>jyxo-web.xsl</filename> a
+                    <filename>zbozi-web.xsl</filename>, které po připojení k XML feedu (i
+                stávajícímu) převedou při zobrazení v prohlížeči nepřehledné XML na přehledný a
+                formátovaný HTML výstup.</para>
+            <para>Transformace lze k souboru připojit použitím buď:</para>
+            <programlisting language="xml"><![CDATA[<?xml-stylesheet type="text/xsl" href="jyxo-web.xsl"?>]]></programlisting>
+            <para>nebo</para>
+            <programlisting language="xml"><![CDATA[<?xml-stylesheet type="text/xsl" href="zbozi-web.xsl"?>]]></programlisting>
+        </sect2>
+    </sect1>
+    <sect1>
+        <title>Závěr</title>
+        <para>Pokud máte k projektu jakékoliv dotazy nebo připomínky, rád je uvítám na adrese
+                <email>mhujer@gmail.com</email>. Ještě raději je ovšem uvidím jako Pull Requesty na
+                <link xlink:href="https://github.com/mhujer/xml-feeds-schemas">Githubu</link>.
+        </para>
+    </sect1>
+</article>
