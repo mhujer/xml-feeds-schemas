@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:sch="http://purl.oclc.org/dsdl/schematron" targetNamespace="urn:x-hujer:feed:zbozi"
-  xmlns="urn:x-hujer:feed:zbozi" elementFormDefault="qualified">
+  xmlns="urn:x-hujer:feed:zbozi" xmlns:feed="urn:x-hujer:feed:zbozi" elementFormDefault="qualified"
+  xmlns:gen="urn:x-hujer:feed:generic">
+  <xs:import namespace="urn:x-hujer:feed:generic" schemaLocation="generic.xsd"/>
+  <xs:annotation>
+    <xs:documentation>Schéma pro XML formát pro srovnávač Zbozi.cz (Seznam). Více informací o
+      formátu na http://napoveda.seznam.cz/cz/specifikace-xml.html</xs:documentation>
+  </xs:annotation>
   <xs:element name="SHOP">
     <xs:complexType>
       <xs:sequence>
@@ -33,7 +39,7 @@
               <xs:element name="DESCRIPTION" type="xs:string"/>
               <xs:element name="URL" type="xs:anyURI"/>
               <xs:element name="IMGURL" type="xs:anyURI" minOccurs="0"/>
-              <xs:element name="PRICE" minOccurs="0" type="TYPE_PRICE_POSITIVE"/>
+              <xs:element name="PRICE" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE"/>
               <xs:element name="VAT" minOccurs="0">
                 <xs:simpleType>
                   <xs:union>
@@ -50,8 +56,8 @@
                   </xs:union>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PRICE_VAT" minOccurs="0" type="TYPE_PRICE_POSITIVE"/>
-              <xs:element name="DUES" type="TYPE_PRICE" minOccurs="0"/>
+              <xs:element name="PRICE_VAT" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE"/>
+              <xs:element name="DUES" type="gen:TYPE_PRICE" minOccurs="0"/>
               <xs:element name="DELIVERY_DATE" minOccurs="0">
                 <xs:simpleType>
                   <xs:union>
@@ -72,14 +78,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="SHOP_DEPOTS" minOccurs="0" type="xs:string"/>
-              <xs:element name="ITEM_TYPE">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:enumeration value="new"/>
-                    <xs:enumeration value="bazaar"/>
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="ITEM_TYPE" type="gen:TYPE_ITEM_TYPE"/>
               <xs:element name="TOLLFREE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:int">
@@ -99,18 +98,13 @@
               <!-- maxOccurs="unbounded" jak na to?-->
               <xs:element name="CATEGORYTEXT" type="xs:string" minOccurs="0"/>
               <!-- maxOccurs="unbounded" jak na to?-->
-              <xs:element name="EAN" type="TYPE_EAN13_CODE" minOccurs="0">
+              <xs:element name="EAN" type="gen:TYPE_EAN13_CODE" minOccurs="0">
                 <xs:annotation>
                   <xs:documentation>kód výrobku EAN13, musí se jednat o validní kód včetně kontrolní
                     číslice</xs:documentation>
                 </xs:annotation>
               </xs:element>
-              <xs:element name="PRODUCTNO" type="xs:string" minOccurs="0">
-                <xs:annotation>
-                  <xs:documentation> kód výrobku udávaný výrobcem, u knih např. ISBN. Neuvádějte zde
-                    vlastní kódy výrobků. </xs:documentation>
-                </xs:annotation>
-              </xs:element>
+              <xs:element name="PRODUCTNO" type="gen:TYPE_CODE" minOccurs="0"/>
               <!-- maxOccurs="unbounded" jak na to?-->
               <xs:element name="VARIANT" minOccurs="0">
                 <xs:complexType>
@@ -123,20 +117,4 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:simpleType name="TYPE_PRICE">
-    <xs:restriction base="xs:decimal">
-      <xs:minInclusive value="0"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="TYPE_PRICE_POSITIVE">
-    <xs:restriction base="xs:decimal">
-      <xs:minExclusive value="0"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="TYPE_EAN13_CODE">
-    <xs:restriction base="xs:int">
-      <xs:totalDigits value="13"/>
-    </xs:restriction>
-  </xs:simpleType>
-
 </xs:schema>
