@@ -162,4 +162,91 @@
             </VARIANT>
         </VARIANTS>
     </ITEM>
+    <ITEM>
+        <PRODUCTNAME>Stan Jurek Midi 2.5 Duo
+        </PRODUCTNAME>
+        <DESCRIPTION>Stan Jurek Midi 2.5 Duo - klasický pohodlný stan pro 2 až 3 osoby s dvěma předsíňkami pro vaření a odkládání batohů. Stan Jurek Midi 2.5 Duo se hodí i na běžnou turistiku nebo i do hor či na delší akce v kempu.           
+            Vlastnostistanu Jurek Midi 2,5 Duo:
+            Vnější stan (tropiko): PES s oboustranou polyuretanovou vrstvou a silikonizovaným ripstop povrchem - nepropustnost 5000 mm vodního sloupce (výborně odolává nízkým teplotám a UV záření).
+            Podlážka: PAD s polyuretanovou vrstvou - nepropustnost 10000 mm vodního sloupce.
+            Samozřejmostí jsou dvojité lepené švy.
+            Vhodný i pro pobyt v nepříznivých klimatických podmínkách.</DESCRIPTION>
+        <URL>http://www.1obchodak.cz/p/stan-jurek-midi-2-duo/</URL>
+        <IMGURL>http://www.1obchodak.cz/files/photos/original/7/7d8624c519fe772e9c92b8ed70446afad1e28bb3.jpg</IMGURL>
+        <PRICE>3708</PRICE>
+        <VAT>20</VAT>
+        <PRICE_VAT>4450</PRICE_VAT>
+        <DELIVERY_DATE>0</DELIVERY_DATE>
+        <MANUFACTURER>Jurek S+R - stany</MANUFACTURER>
+        <CATEGORIES>
+            <CATEGORY>Stany</CATEGORY>
+            <CATEGORY>Stany / Střední stany (2-3 osoby)</CATEGORY>
+        </CATEGORIES>
+        <CODE>SKU643</CODE>
+        <PARAMETERS>
+            <PARAMETER>
+                <NAME>Hmotnost (g)</NAME>
+                <VALUE>3500</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Voděodolnost vnějšího stanu (mm)</NAME>
+                <VALUE>5000</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Počet prutů</NAME>
+                <VALUE>2+2 podpěry</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Rozměry po sbalení (cm)</NAME>
+                <VALUE>50x19</VALUE>
+            </PARAMETER>
+        </PARAMETERS>
+    </ITEM>
+    <ITEM>
+        <PRODUCTNAME>Turistický batoh Treksport Ladakh 65</PRODUCTNAME>
+        <DESCRIPTION>Treksport Ladakh 65 - velmi zajímavý dvoukomorový batoh na běžnou turistiku, batoh Ladakh 65 je vhodný zejména pro menší postavy a ženy.
+            Vlastnosti batohu Treksport Ladakh 65:
+            Funkční prvky batohu: - 2 komory oddělené přepážkou
+            odnímatelný a výškově nastavitelný vrchlík batohu
+            boční kompresní popruhy
+            možnost upnout na batoh extrabag
+            přihrádka pro Camelbag
+            integrovaná pláštěnka
+            3M reflexní ochranné prvky
+            smyčky na cepín</DESCRIPTION>
+        <URL>http://www.1obchodak.cz/p/turisticky-batoh-treksport-ladakh-65/</URL>
+        <IMGURL>http://www.1obchodak.cz/files/photos/original/0/057f7c1350d8d2e944e2a212ed3204a90cacd698.jpg</IMGURL>
+        <PRICE>1749</PRICE>
+        <VAT>20</VAT>
+        <PRICE_VAT>2099</PRICE_VAT>
+        <DELIVERY_DATE>7</DELIVERY_DATE>
+        <MANUFACTURER>Treksport - batohy</MANUFACTURER>
+        <CATEGORIES>
+            <CATEGORY>Batohy</CATEGORY>
+            <CATEGORY>Batohy / Velké batohy</CATEGORY>
+        </CATEGORIES>
+        <PARAMETERS>
+            <PARAMETER>
+                <NAME>Barva</NAME>
+                <VALUE>modrá</VALUE>
+                <VALUE>šedá</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Hmotnost (g)</NAME>
+                <VALUE>2340</VALUE>
+            </PARAMETER>
+            <PARAMETER>
+                <NAME>Objem (l)</NAME>
+                <VALUE>65</VALUE>
+            </PARAMETER>
+        </PARAMETERS>
+        <VARIANTS>
+            <VARIANT>
+                <PRODUCTNAMEEXT>barva: modrá </PRODUCTNAMEEXT>
+            </VARIANT>
+            <VARIANT>
+                <PRODUCTNAMEEXT>barva: šedá</PRODUCTNAMEEXT>
+            </VARIANT>
+        </VARIANTS>
+    </ITEM>
 </SHOP>
