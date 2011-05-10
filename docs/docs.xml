@@ -87,24 +87,9 @@
                 <sect4>
                     <title>PHP</title>
                     <para>Transformace je možné provést přímo z PHP:</para>
-                    <programlisting language="php"><![CDATA[<?php
-generate('../jyxo.xsl', 'jyxo-out.xml');
-generate('../zbozi.xsl', 'zbozi-out.xml');
-
-function generate($inputTransformation, $outputFile)
-{
-    $xml = new DOMDocument;
-    $xml->load('../universal.xml');
-
-    $xsl = new DOMDocument;
-    $xsl->load($inputTransformation);
-
-    $proc = new XSLTProcessor();
-    $proc->importStylesheet($xsl);
-    $newXml = $proc->transformToXML($xml);
-    file_put_contents($outputFile, $newXml);
-}]]></programlisting>
-                    <para>Kód je k dispozici v souboru <filename>php/transform.php</filename>.</para>
+                    <programlisting language="php"><xi:include href="../php/transform.php" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"/></programlisting>
+                    <para>Kód je k dispozici v souboru
+                        <filename>php/transform.php</filename>.</para>
                 </sect4>
             </sect3>
         </sect2>
@@ -114,6 +99,12 @@ function generate($inputTransformation, $outputFile)
                     <filename>zbozi.xsd</filename>, která jsou převedením textového popisu formátu
                 jednotlivých služeb do XML schématu, které lze využít pro automatickou validaci
                 vygenerovaného XML.</para>
+            <sect3>
+                <title>PHP</title>
+                <para>Validace proti schématům je možné spustit přímo z PHP:</para>
+                <programlisting language="php"><xi:include href="../php/validate.php" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"/></programlisting>
+                <para>Kód je k dispozici v souboru <filename>php/validate.php</filename>.</para>
+            </sect3>
         </sect2>
         <sect2>
             <title>XSL transformace pro zobrazení v prohlížeči</title>
