@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xsl:stylesheet [
+<!ENTITY ndash "&#x2013;">
+]>
 <?oxygen RNGSchema="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" type="xml"?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
     version="5.0" xml:lang="cs">
@@ -36,8 +39,8 @@
                         </itemizedlist></para>
                 </listitem>
                 <listitem>
-                    <para>Jejich XMLka nemají definované schéma - nedá se poznat, zda export z
-                        eshopu je OK</para>
+                    <para>Jejich XMLka nemají definované schéma &ndash; nedá se tedy poznat, zda
+                        export z eshopu je OK</para>
                 </listitem>
                 <listitem>
                     <para>Je spoustu práce s generováním validních feedů pro různé srovnávače</para>
@@ -62,7 +65,8 @@
         <sect2>
             <title>Zlepšit User-Experience při práci s feedy</title>
             <para>Vytvořením xsl transformací, které mohou být připojeny ke stávajícím XML exportům
-                pro jednotlivé srovnávače - při zobrazení v browseru bude feed přehlednější</para>
+                pro jednotlivé srovnávače &ndash; při zobrazení v browseru bude feed
+                přehlednější</para>
         </sect2>
     </sect1>
     <sect1>
