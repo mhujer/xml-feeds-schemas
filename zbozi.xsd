@@ -78,7 +78,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="SHOP_DEPOTS" minOccurs="0" type="xs:string"/>
-              <xs:element name="ITEM_TYPE" type="gen:TYPE_ITEM_TYPE"/>
+              <xs:element name="ITEM_TYPE" type="gen:TYPE_ITEM_TYPE" minOccurs="0"/>
               <xs:element name="TOLLFREE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:int">
@@ -108,7 +108,9 @@
               <!-- maxOccurs="unbounded" jak na to?-->
               <xs:element name="VARIANT" minOccurs="0">
                 <xs:complexType>
-                  <!-- @todo -->
+                  <xs:sequence>
+                    <xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+                  </xs:sequence>
                 </xs:complexType>
               </xs:element>
             </xs:all>

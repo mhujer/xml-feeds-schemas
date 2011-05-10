@@ -10,6 +10,7 @@
         <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
         <PRICE>620</PRICE>
         <VAT>20</VAT>
+        <EAN>1234567890123</EAN>
     </SHOPITEM>
     <SHOPITEM>
         <PRODUCT>Světélkující podložka pod myš</PRODUCT>
