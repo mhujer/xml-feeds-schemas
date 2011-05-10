@@ -15,6 +15,10 @@ p {
     margin-bottom : 5px;
 }
 
+p ul {
+    margin-top: 0px;
+}
+
 .price strong {
     font-size : 200%;
     font-weight : bold;
