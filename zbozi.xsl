@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
-  xmlns:feed="urn:x-hujer:feed:universal">
+  exclude-result-prefixes="feed" xmlns:feed="urn:x-hujer:feed:universal">
   <xsl:output method="xml" indent="yes"/>
   <xsl:template match="/feed:SHOP">
     <xsl:processing-instruction name="xml-stylesheet">type="text/xsl"
