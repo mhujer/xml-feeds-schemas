@@ -1,8 +1,12 @@
 body {
     font-family : calibri, arial, helvetica, sans-serif;
-    margin-left : auto;
-    margin-right : auto;
+    text-align: center;
+}
+
+div#content {
+    margin: 0 auto;
     width : 500px;
+    text-align: left;
 }
 
 div.product {
@@ -37,6 +41,10 @@ div.img {
     float : left;
     margin-right : 5px;
     margin-bottom : 5px;
+}
+
+div.img img {
+    height: 150px;
 }
 
 .description {
