@@ -5,42 +5,42 @@
         <PRODUCT>Světélkující podložka pod myš</PRODUCT>
         <DESCRIPTION>Fosforeskující okraj, nevyžaduje baterie.</DESCRIPTION>
         <URL>http://obchod.cz/podlozky-pod-mys/fosfor</URL>
-        <ITEM_TYPE>new</ITEM_TYPE>
-        <DELIVERY_DATE>0</DELIVERY_DATE>
         <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
         <PRICE>620</PRICE>
         <VAT>20</VAT>
+        <DELIVERY_DATE>0</DELIVERY_DATE>
+        <ITEM_TYPE>new</ITEM_TYPE>
         <EAN>1234567890123</EAN>
     </SHOPITEM>
     <SHOPITEM>
         <PRODUCT>Světélkující podložka pod myš</PRODUCT>
         <DESCRIPTION>Fosforeskující okraj, nevyžaduje baterie.</DESCRIPTION>
         <URL>http://obchod.cz/podlozky-pod-mys/fosfor</URL>
-        <ITEM_TYPE>new</ITEM_TYPE>
-        <DELIVERY_DATE>0</DELIVERY_DATE>
         <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
         <PRICE>620</PRICE>
         <VAT>0.2</VAT>
+        <DELIVERY_DATE>0</DELIVERY_DATE>
+        <ITEM_TYPE>new</ITEM_TYPE>
     </SHOPITEM>
     <SHOPITEM>
         <PRODUCT>Světélkující podložka pod myš</PRODUCT>
         <DESCRIPTION>Fosforeskující okraj, nevyžaduje baterie.</DESCRIPTION>
         <URL>http://obchod.cz/podlozky-pod-mys/fosfor</URL>
-        <ITEM_TYPE>new</ITEM_TYPE>
-        <DELIVERY_DATE>1</DELIVERY_DATE>
         <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
         <PRICE_VAT>756</PRICE_VAT>
+        <DELIVERY_DATE>1</DELIVERY_DATE>
+        <ITEM_TYPE>new</ITEM_TYPE>
     </SHOPITEM>
     <SHOPITEM>
         <PRODUCT>Světélkující podložka pod myš</PRODUCT>
         <DESCRIPTION>Fosforeskující okraj, nevyžaduje baterie.</DESCRIPTION>
         <URL>http://obchod.cz/podlozky-pod-mys/fosfor</URL>
-        <ITEM_TYPE>new</ITEM_TYPE>
-        <DELIVERY_DATE>ihned</DELIVERY_DATE>
         <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
         <PRICE>620</PRICE>
+        <VAT>20</VAT>
         <PRICE_VAT>756</PRICE_VAT>
-        <VAT>0</VAT>
+        <DELIVERY_DATE>ihned</DELIVERY_DATE>
+        <ITEM_TYPE>new</ITEM_TYPE>
     </SHOPITEM>
     <!--<SHOPITEM>
         <PRODUCTNAME>Světélkující podložka pod myš</PRODUCTNAME>
@@ -56,10 +56,10 @@
         <PRODUCTNAMEEXT>EXT</PRODUCTNAMEEXT>
         <DESCRIPTION>Fosforeskující okraj, nevyžaduje baterie.</DESCRIPTION>
         <URL>http://obchod.cz/podlozky-pod-mys/fosfor</URL>
-        <ITEM_TYPE>new</ITEM_TYPE>
-        <DELIVERY_DATE>2011-11-11</DELIVERY_DATE>
         <IMGURL>http://obchod.cz/obrazky/podlozky-pod-mys/fosfor.jpg</IMGURL>
         <PRICE>620</PRICE>
         <PRICE_VAT>756</PRICE_VAT>
+        <DELIVERY_DATE>2011-11-11</DELIVERY_DATE>
+        <ITEM_TYPE>new</ITEM_TYPE>
     </SHOPITEM>
 </SHOP>
