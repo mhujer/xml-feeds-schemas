@@ -1,6 +1,8 @@
 <?php
 chdir('../');
 
+validate('heureka.xml', 'heureka.xsd');
+validate('heureka-gen.xml', 'heureka.xsd');
 validate('jyxo.xml', 'jyxo.xsd');
 validate('jyxo-gen.xml', 'jyxo.xsd');
 validate('zbozi.xml', 'zbozi.xsd');

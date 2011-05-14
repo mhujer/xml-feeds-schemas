@@ -1,4 +1,5 @@
 <?php
+generate('../heureka.xsl', 'heureka-out.xml');
 generate('../jyxo.xsl', 'jyxo-out.xml');
 generate('../zbozi.xsl', 'zbozi-out.xml');
 
