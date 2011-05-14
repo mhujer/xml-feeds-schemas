@@ -32,6 +32,16 @@
             <xs:maxInclusive value="9999999999999"/>
         </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="TYPE_ISBN_CODE">
+        <xs:annotation>
+            <xs:documentation>je alfanumerický kód určený pro jednoznačnou identifikaci knižních
+                vydání. Formáty ISBN-10 a ISBN-13.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="10"/>
+            <xs:maxLength value="20"/>
+        </xs:restriction>
+    </xs:simpleType>
     <xs:simpleType name="TYPE_VAT_INTEGER">
         <xs:annotation>
             <xs:documentation>DPH v procentech, tedy např. 20%</xs:documentation>

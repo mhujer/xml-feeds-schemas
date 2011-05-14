@@ -71,6 +71,7 @@
                             </xs:complexType>
                           </xs:element>
                           <xs:element name="EAN" type="gen:TYPE_EAN13_CODE" minOccurs="0"/>
+                          <xs:element name="ISBN" type="gen:TYPE_ISBN_CODE" minOccurs="0"/>
                           <xs:element name="CODE" type="gen:TYPE_CODE" minOccurs="0"/>
                         </xs:sequence>
                       </xs:complexType>

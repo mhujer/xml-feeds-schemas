@@ -14,15 +14,14 @@
         <xs:element name="SHOPITEM" maxOccurs="unbounded">
           <xs:annotation>
             <xs:appinfo>
-              <!-- @todo -->
               <sch:ns uri="urn:x-hujer:feed:heureka" prefix="feed"/>
               <sch:pattern name="PRICE_VAT je nepovinné, pokud jsou vyplněn PRICE a VAT">
                 <sch:rule context="feed:SHOPITEM">
-                  <sch:assert test="((feed:PRICE) or (feed:PRICE and feed:VAT) or (feed:PRICE_VAT))">
-                    Ceny na serveru Heureka.cz uvádíme konečné. Rozeznáváme je následujícím způsobem:
-                    a) je uveden element PRICE_VAT, bereme částku jako konečnou cenu
-                    b) jsou uvedeny elementy PRICE a VAT, dopočítáme na konečnou cenu
-                    c) je uveden pouze element PRICE, bereme tuto částku jako konečnou</sch:assert>
+                  <sch:assert test="((feed:PRICE) or (feed:PRICE and feed:VAT) or (feed:PRICE_VAT))"
+                    > Ceny na serveru Heureka.cz uvádíme konečné. Rozeznáváme je následujícím
+                    způsobem: a) je uveden element PRICE_VAT, bereme částku jako konečnou cenu b)
+                    jsou uvedeny elementy PRICE a VAT, dopočítáme na konečnou cenu c) je uveden
+                    pouze element PRICE, bereme tuto částku jako konečnou</sch:assert>
                 </sch:rule>
               </sch:pattern>
             </xs:appinfo>
@@ -120,7 +119,7 @@
                     kódy zboží!</xs:documentation>
                 </xs:annotation>
               </xs:element>
-              <xs:element name="ISBN" type="TYPE_HEUREKA_ISBN" minOccurs="0">
+              <xs:element name="ISBN" type="gen:TYPE_ISBN_CODE" minOccurs="0">
                 <xs:annotation>
                   <xs:documentation>je alfanumerický kód určený pro jednoznačnou identifikaci
                     knižních vydání. Podporujeme formáty ISBN-10 a ISBN-13. Čísla v ISBN kódu se
@@ -178,13 +177,6 @@
         </xs:restriction>
       </xs:simpleType>
     </xs:union>
-  </xs:simpleType>
-
-  <xs:simpleType name="TYPE_HEUREKA_ISBN">
-    <xs:restriction base="xs:string">
-      <xs:minLength value="10"/>
-      <xs:maxLength value="20"/>
-    </xs:restriction>
   </xs:simpleType>
 
 </xs:schema>
