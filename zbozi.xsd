@@ -40,60 +40,14 @@
               <xs:element name="URL" type="xs:anyURI"/>
               <xs:element name="IMGURL" type="xs:anyURI" minOccurs="0"/>
               <xs:element name="PRICE" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE"/>
-              <xs:element name="VAT" minOccurs="0">
-                <xs:simpleType>
-                  <xs:union>
-                    <xs:simpleType>
-                      <xs:restriction base="xs:integer">
-                        <xs:minInclusive value="0"/>
-                      </xs:restriction>
-                    </xs:simpleType>
-                    <xs:simpleType>
-                      <xs:restriction base="xs:decimal">
-                        <xs:minInclusive value="0"/>
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:union>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="VAT" minOccurs="0" type="ZBOZI_VAT"/>
               <xs:element name="PRICE_VAT" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE"/>
               <xs:element name="DUES" type="gen:TYPE_PRICE" minOccurs="0"/>
-              <xs:element name="DELIVERY_DATE" minOccurs="0">
-                <xs:simpleType>
-                  <xs:union>
-                    <xs:simpleType>
-                      <xs:restriction base="xs:date"/>
-                    </xs:simpleType>
-                    <xs:simpleType>
-                      <xs:restriction base="xs:int">
-                        <xs:minInclusive value="-1"/>
-                      </xs:restriction>
-                    </xs:simpleType>
-                    <xs:simpleType>
-                      <xs:restriction base="xs:string">
-                        <xs:enumeration value="ihned"/>
-                      </xs:restriction>
-                    </xs:simpleType>
-                  </xs:union>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="DELIVERY_DATE" minOccurs="0" type="ZBOZI_DELIVERY_DATE"/>
               <xs:element name="SHOP_DEPOTS" minOccurs="0" type="xs:string"/>
               <xs:element name="ITEM_TYPE" type="gen:TYPE_ITEM_TYPE" minOccurs="0"/>
-              <xs:element name="TOLLFREE" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:int">
-                    <xs:enumeration value="1"/>
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="FIRMY_CZ" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:int">
-                    <xs:enumeration value="0"/>
-                    <xs:enumeration value="1"/>
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="TOLLFREE" type="ZBOZI_TOLFREE" minOccurs="0"/>
+              <xs:element name="FIRMY_CZ" type="ZBOZI_FIRMY_CZ" minOccurs="0"/>
               <xs:element name="MANUFACTURER" type="xs:string" minOccurs="0"/>
               <xs:element name="CATEGORYTEXT" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
               <xs:element name="EAN" type="gen:TYPE_EAN13_CODE" minOccurs="0" maxOccurs="unbounded">
@@ -106,8 +60,27 @@
               <xs:element name="VARIANT" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded"
-                      processContents="lax"/>
+                    <xs:element name="PRODUCT" type="xs:string" minOccurs="0"/>
+                    <xs:element name="PRODUCTNAME" type="xs:string" minOccurs="0"/>
+                    <xs:element name="PRODUCTNAMEEXT" type="xs:string" minOccurs="0"/>
+                    <xs:element name="DESCRIPTION" type="xs:string" minOccurs="0"/>
+                    <xs:element name="URL" type="xs:anyURI" minOccurs="0"/>
+                    <xs:element name="IMGURL" type="xs:anyURI" minOccurs="0"/>
+                    <xs:element name="PRICE" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE"/>
+                    <xs:element name="VAT" minOccurs="0" type="ZBOZI_VAT"/>
+                    <xs:element name="PRICE_VAT" minOccurs="0" type="gen:TYPE_PRICE_POSITIVE"/>
+                    <xs:element name="DUES" type="gen:TYPE_PRICE" minOccurs="0"/>
+                    <xs:element name="DELIVERY_DATE" minOccurs="0" type="ZBOZI_DELIVERY_DATE"/>
+                    <xs:element name="SHOP_DEPOTS" minOccurs="0" type="xs:string"/>
+                    <xs:element name="ITEM_TYPE" type="gen:TYPE_ITEM_TYPE" minOccurs="0"/>
+                    <xs:element name="TOLLFREE" type="ZBOZI_TOLFREE" minOccurs="0"/>
+                    <xs:element name="FIRMY_CZ" type="ZBOZI_FIRMY_CZ" minOccurs="0"/>
+                    <xs:element name="MANUFACTURER" type="xs:string" minOccurs="0"/>
+                    <xs:element name="CATEGORYTEXT" type="xs:string" minOccurs="0"
+                      maxOccurs="unbounded"/>
+                    <xs:element name="EAN" type="gen:TYPE_EAN13_CODE" minOccurs="0"
+                      maxOccurs="unbounded"/>
+                    <xs:element name="PRODUCTNO" type="gen:TYPE_CODE" minOccurs="0"/>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
@@ -117,4 +90,50 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
+  <xs:simpleType name="ZBOZI_DELIVERY_DATE">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:date"/>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="-1"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ihned"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+  <xs:simpleType name="ZBOZI_VAT">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:minInclusive value="0"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+          <xs:minInclusive value="0"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+  <xs:simpleType name="ZBOZI_FIRMY_CZ">
+    <xs:restriction base="xs:int">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ZBOZI_TOLFREE">
+    <xs:restriction base="xs:int">
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>
