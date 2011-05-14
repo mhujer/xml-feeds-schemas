@@ -85,9 +85,9 @@
             </sect3>
             <sect3>
                 <title>Transformace pro jednotlivé srovnávače</title>
-                <para>Vytvořil jsem XSL tranformace v souborech <filename>jyxo.xsl</filename> a
-                        <filename>zbozi.xsl</filename>, které převedou data z univerzálního feedu fo
-                    formátu pro příslušné srovnávače.</para>
+                <para>Vytvořil jsem XSL tranformace v souborech <filename>heureka.xsl</filename>,
+                        <filename>jyxo.xsl</filename> a <filename>zbozi.xsl</filename>, které
+                    převedou data z univerzálního feedu fo formátu pro příslušné srovnávače.</para>
                 <sect4>
                     <title>PHP</title>
                     <para>Transformace je možné provést přímo z PHP:</para>
@@ -99,10 +99,10 @@
         </sect2>
         <sect2>
             <title>Schémata pro jednotlivé formáty</title>
-            <para>Vytvořil jsem schémata <filename>jyxo.xsd</filename> a
-                    <filename>zbozi.xsd</filename>, která jsou převedením textového popisu formátu
-                jednotlivých služeb do XML schématu, které lze využít pro automatickou validaci
-                vygenerovaného XML.</para>
+            <para>Vytvořil jsem schémata <filename>heureka.xsd</filename>,
+                    <filename>jyxo.xsd</filename> a <filename>zbozi.xsd</filename>, která jsou
+                převedením textového popisu formátu jednotlivých služeb do XML schématu, které lze
+                využít pro automatickou validaci vygenerovaného XML.</para>
             <sect3>
                 <title>PHP</title>
                 <para>Validace proti schématům je možné spustit přímo z PHP:</para>
@@ -112,11 +112,13 @@
         </sect2>
         <sect2>
             <title>XSL transformace pro zobrazení v prohlížeči</title>
-            <para>Vytvořil jsem tranformace <filename>jyxo-web.xsl</filename> a
-                    <filename>zbozi-web.xsl</filename>, které po připojení k XML feedu (i
-                stávajícímu) převedou při zobrazení v prohlížeči nepřehledné XML na přehledný a
-                formátovaný HTML výstup.</para>
+            <para>Vytvořil jsem tranformace <filename>heureka-web.xsl</filename>,
+                    <filename>jyxo-web.xsl</filename> a <filename>zbozi-web.xsl</filename>, které po
+                připojení k XML feedu (i stávajícímu) převedou při zobrazení v prohlížeči
+                nepřehledné XML na přehledný a formátovaný HTML výstup.</para>
             <para>Transformace lze k souboru připojit použitím buď:</para>
+            <programlisting language="xml"><![CDATA[<?xml-stylesheet type="text/xsl" href="heureka-web.xsl"?>]]></programlisting>
+            <para>nebo</para>
             <programlisting language="xml"><![CDATA[<?xml-stylesheet type="text/xsl" href="jyxo-web.xsl"?>]]></programlisting>
             <para>nebo</para>
             <programlisting language="xml"><![CDATA[<?xml-stylesheet type="text/xsl" href="zbozi-web.xsl"?>]]></programlisting>
