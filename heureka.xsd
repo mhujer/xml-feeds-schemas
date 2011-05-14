@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron" targetNamespace="urn:x-hujer:feed:heureka"
+  xmlns="urn:x-hujer:feed:heureka" xmlns:feed="urn:x-hujer:feed:heureka"
+  elementFormDefault="qualified" xmlns:gen="urn:x-hujer:feed:generic">
+  <xs:import namespace="urn:x-hujer:feed:generic" schemaLocation="generic.xsd"/>
+  <xs:annotation>
+    <xs:documentation>Schéma pro XML formát pro srovnávač heureka.cz. Více informací o formátu na
+      http://sluzby.heureka.cz/napoveda/import/</xs:documentation>
+  </xs:annotation>
+  <xs:element name="SHOP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SHOPITEM" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:appinfo>
+              <sch:ns uri="urn:x-hujer:feed:heureka" prefix="feed"/>
+              <sch:pattern
+                name="PRODUCT je nepovinný, pokud jsou uvedeny elementy PRODUCTNAME a PRODUCTNAMEEXT">
+                <sch:rule context="feed:SHOPITEM">
+                  <sch:report
+                    test="(not(feed:PRODUCTNAME) or not(feed:PRODUCTNAMEEXT)) and not(feed:PRODUCT)"
+                    >Není zadáno PRODUCT ani PRODUCTNAME a PRODUCTNAMEEXT</sch:report>
+                </sch:rule>
+              </sch:pattern>
+              <sch:pattern name="PRICE_VAT je nepovinné, pokud jsou vyplněn PRICE a VAT">
+                <sch:rule context="feed:SHOPITEM">
+                  <sch:report test="(not(feed:PRICE) or not(feed:VAT)) and not(feed:PRICE_VAT)">Není
+                    zadáno PRICE_VAT ani PRICE a VAT</sch:report>
+                </sch:rule>
+              </sch:pattern>
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PRODUCT">
+                <xs:annotation>
+                  <xs:documentation> obsahuje název produktu, musí obsahovat, snažte se uvádět
+                    přesné označení produktu, vč. produktového (modelového) čísla. Pokud názvy
+                    produktů nebudou obsahovat produktové číslo, hrozí, že nedokážeme produkty
+                    správně identifikovat a tudíž spárovat. Do názvu produktu neuvádějte žádné další
+                    přívlastky, typu doprava zdarma, plus pouzdro, skladem aj.</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="6"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION" type="xs:string">
+                <xs:annotation>
+                  <xs:documentation>popis produktu, snažte se uvádět co nejrelevantnější popis, ve
+                    fulltextovém vyhledávání se bere v potaz</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="URL" type="xs:anyURI">
+                <xs:annotation>
+                  <xs:documentation>url adresa produktu, na této adrese musí být uvedena cena
+                    produktu</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="IMGURL" type="xs:anyURI">
+                <xs:annotation>
+                  <xs:documentation>url adresa obrázku produktu</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="PRICE" minOccurs="0" type="TYPE_HEUREKA_PRICE">
+                <xs:annotation>
+                  <xs:documentation>cena produktu bez DPH, v ceně musí být uvedeny autorské a
+                    recyklační poplatky pokud nejsou uvedeny zvlášť v položce
+                    DUES</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="PRICE_VAT" minOccurs="0" type="TYPE_HEUREKA_PRICE">
+                <xs:annotation>
+                  <xs:documentation>cena produktu s DPH, v ceně musí být uvedeny autorské a
+                    recyklační poplatky pokud nejsou uvedeny zvlášť v položce
+                    DUES</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="DUES" type="TYPE_HEUREKA_PRICE" minOccurs="0"/>
+              <xs:element name="VAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:union>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxExclusive value="2"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:pattern value="(0|1),[0-9]{2}"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:union>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ITEM_TYPE" minOccurs="0" type="gen:TYPE_ITEM_TYPE">
+                <xs:annotation>
+                  <xs:documentation>k rozlišení nových a bazarových položek. Nová položka: new
+                    Bazarová (i repasovaná) položka: bazaar</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="MANUFACTURER" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>obsahuje název výrobce produktu</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="CATEGORYTEXT" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation>zařazení produktu do kategorie, uvádějte vždy celou cestu k
+                    produktu, tak jak to máte na Vašem eshopu (stačí nám tedy Vaše
+                    kategorie)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="EAN" type="gen:TYPE_EAN13_CODE" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>EAN kód je používán k označování jednotlivých druhů zboží.
+                    Podporujeme formát EAN 13. Neuvádějte však interní čísla produktů, ale oficiální
+                    kódy zboží!</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ISBN" type="TYPE_HEUREKA_ISBN" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>je alfanumerický kód určený pro jednoznačnou identifikaci
+                    knižních vydání. Podporujeme formáty ISBN-10 a ISBN-13. Čísla v ISBN kódu se
+                    oddělují pomlčkou, například "978-0-123456-47-2"</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="DELIVERY_DATE" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Dodací doba zboží ve dnech</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:int">
+                    <xs:minInclusive value="0"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARAM" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation>zde lze uvést další parametry produktu, pokud nejsou parametry
+                    vyplněné, pak není možné zobrazovat Vaše produkty v konkrétním
+                    filtrování</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PARAM_NAME" type="xs:string"/>
+                    <xs:element name="VAL" type="xs:string" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:unique name="url-je-ve-feedu-unikatni">
+      <xs:annotation>
+        <xs:documentation>URL produktu musí být v rámci feedu unikátní</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="feed:SHOPITEM"/>
+      <xs:field xpath="feed:URL"/>
+    </xs:unique>
+  </xs:element>
+
+  <xs:simpleType name="TYPE_HEUREKA_PRICE">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="gen:TYPE_PRICE_POSITIVE">
+          <xs:fractionDigits value="2"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9 ]{1,99}(,{0,1}[0-9]{1,2}){0,1}"/>
+          <xs:pattern value=""/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+  <xs:simpleType name="TYPE_HEUREKA_ISBN">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="10"/>
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="heureka-web.xsl"?>
+<SHOP xmlns="urn:x-hujer:feed:heureka" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:x-hujer:feed:heureka heureka.xsd">
+	<SHOPITEM>
+		<PRODUCT>Nokia 5800 XpressMusic</PRODUCT>
+		<DESCRIPTION>Klasický s plným dotykovým uživatelským rozhraním</DESCRIPTION>
+		<URL>http://obchod.cz/mobily/nokia-5800-xpressmusic</URL>
+		<IMGURL>http://obchod.cz/mobily/nokia-5800- xpressmusic/obrazek.jpg</IMGURL>
+		<PRICE>5000</PRICE>
+		<PRICE_VAT>6000</PRICE_VAT>
+		<VAT>0,20</VAT>
+		<ITEM_TYPE>new</ITEM_TYPE>
+		<MANUFACTURER>NOKIA</MANUFACTURER>
+		<CATEGORYTEXT>Elektronika | Mobilní telefony</CATEGORYTEXT>
+		<EAN>6417182041488</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+	</SHOPITEM>
+	<SHOPITEM>
+		<PRODUCT>Nokia 5800 XpressMusic</PRODUCT>
+		<DESCRIPTION>Klasický s plným dotykovým uživatelským rozhraním</DESCRIPTION>
+		<URL>http://obchod.cz/mobily/nokia-5800-xpressmusic2</URL>
+		<IMGURL>http://obchod.cz/mobily/nokia-5800- xpressmusic/obrazek.jpg</IMGURL>
+		<PRICE>5 000,50</PRICE>
+		<PRICE_VAT>6000</PRICE_VAT>
+		<VAT>0,20</VAT>
+	</SHOPITEM>
+	<SHOPITEM>
+		<PRODUCT>Nokia 5800 XpressMusic</PRODUCT>
+		<DESCRIPTION>Klasický s plným dotykovým uživatelským rozhraním</DESCRIPTION>
+		<URL>http://obchod.cz/mobily/nokia-5800-xpressmusic3</URL>
+		<IMGURL>http://obchod.cz/mobily/nokia-5800- xpressmusic/obrazek.jpg</IMGURL>
+		<PRICE>5 000,50</PRICE>
+		<PRICE_VAT>6000</PRICE_VAT>
+		<VAT>0,20</VAT>
+	</SHOPITEM>
+
+	<!-- Ukázka kvalitního XML souboru pro PARFÉMY -->
+	<SHOPITEM>
+		<PRODUCT>Hugo Boss No.6 toaletní voda 100 ml</PRODUCT>
+		<DESCRIPTION>Úspěšný muž nové éry - cílevědomý, úspěšný se zdravou dávkou sebedůvěry. Výrazná mužná vůně...</DESCRIPTION>
+		<URL>http://obchodxx.cz/parfemy/hugo-boss-no.6-toaletni-voda-100-ml/</URL>
+		<IMGURL>http://obchodxx.cz/parfemy/hugo-boss-no.6-toaletni-voda-100-ml/321/obrazek.jpg</IMGURL>
+		<PRICE_VAT>890</PRICE_VAT>
+		<MANUFACTURER>Hugo Boss</MANUFACTURER>
+		<CATEGORYTEXT>parfémy</CATEGORYTEXT>
+		<EAN>7370523511000</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Určení</PARAM_NAME>
+			<VAL>pánský</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Typ</PARAM_NAME>
+			<VAL>toaletní voda</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Objem</PARAM_NAME>
+			<VAL>100 ml</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Hlava parfému</PARAM_NAME>
+			<VAL>jablko; sladká skořice; bergamot</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Srdce parfému</PARAM_NAME>
+			<VAL>Geranium; hřebíček; mech</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Základ parfému</PARAM_NAME>
+			<VAL>Cedrové dřevo; santalové dřevo; vetiver; olivové dřevo</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Tester</PARAM_NAME>
+			<VAL>ne</VAL>
+		</PARAM>
+	</SHOPITEM>
+	<SHOPITEM>
+		<PRODUCT>DKNY Be Delicious parfémovaná voda 100 ml</PRODUCT>
+		<DESCRIPTION>Dámská parfemová voda Žena, muž a jablko. To je nová vůně DKNY Be Delicious inspirovaná New Yorkem...</DESCRIPTION>
+		<URL>http://obchodxx.cz/parfemy/dkny-be-delicious-parfemovana-voda-100-ml/</URL>
+		<IMGURL>http://obchodxx.cz/parfemy/dkny-be-delicious-parfemovana-voda-100-ml/321/obrazek.jpg</IMGURL>
+		<PRICE_VAT>1190</PRICE_VAT>
+		<MANUFACTURER>DKNY</MANUFACTURER>
+		<CATEGORYTEXT>parfémy|parfémovaná voda</CATEGORYTEXT>
+		<EAN>7635110098240</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Určení</PARAM_NAME>
+			<VAL>dámský</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Typ</PARAM_NAME>
+			<VAL>parfémovaná voda</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Objem</PARAM_NAME>
+			<VAL>100 ml</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Hlava parfému</PARAM_NAME>
+			<VAL>zelené jablko; grapefruit; okurka; magnolie</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Srdce parfému</PARAM_NAME>
+			<VAL>Tuberóza; růže; konvalinka; fialka</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Základ parfému</PARAM_NAME>
+			<VAL>světlé dřevo; santalové dřevo; exotické květiny; bílá ambra</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Tester</PARAM_NAME>
+			<VAL>ne</VAL>
+		</PARAM>
+	</SHOPITEM>
+
+	<SHOPITEM>
+		<PRODUCT>Bvlgari pour Homme toaletní voda 100 ml Tester</PRODUCT>
+		<DESCRIPTION>Bvlgari Pour Homme EDT 100ml M TESTER Toaletní voda pro muže...</DESCRIPTION>
+		<URL>http://obchodxx.cz/parfemy/bvlgari-pour-homme-toaletni-voda-100-ml-tester/</URL>
+		<IMGURL>http://obchodxx.cz/parfemy/bvlgari-pour-homme-toaletni-voda-100-ml-tester/321/obrazek.jpg</IMGURL>
+		<PRICE_VAT>536</PRICE_VAT>
+		<MANUFACTURER>Bvlgari</MANUFACTURER>
+		<CATEGORYTEXT>parfémy | toaletni vody</CATEGORYTEXT>
+		<EAN>8591110000100</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Určení</PARAM_NAME>
+			<VAL>pánský</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Typ</PARAM_NAME>
+			<VAL>toaletní voda</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Objem</PARAM_NAME>
+			<VAL>100 ml</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Hlava parfému</PARAM_NAME>
+			<VAL>bergamot; levandule; mandarinka; aldehyd</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Srdce parfému</PARAM_NAME>
+			<VAL>čaj darjeeling; pepř; koriandr; muškát; karafiát</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Základ parfému</PARAM_NAME>
+			<VAL>Cedrové dřevo; jantar; fazole tonka; dubový mech</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Tester</PARAM_NAME>
+			<VAL>ano</VAL>
+		</PARAM>
+	</SHOPITEM>
+
+	<!-- Ukázka kvalitního XML souboru pro KNIHY -->
+	<SHOPITEM>
+		<PRODUCT>Tajemství – Jacqueline Wilsonová</PRODUCT>
+		<DESCRIPTION>Příběh o přátelství Zlaty a Indie, o dívkách ze sociálně rozdílných rodin. Knížka pro děti okolo deseti let.</DESCRIPTION>
+		<URL>http://obchodxx.cz/knihy/122655/Tajemstvi/</URL>
+		<IMGURL>http://obchodxx.cz/knihy/122655/Tajemstvi//obrazek.jpg</IMGURL>
+		<PRICE_VAT>134</PRICE_VAT>
+		<ITEM_TYPE>bazaar</ITEM_TYPE>
+		<MANUFACTURER>BB art</MANUFACTURER>
+		<CATEGORYTEXT>Knihy | beletrie</CATEGORYTEXT>
+		<EAN>9788072579525</EAN>
+		<ISBN>80-7257-952-5</ISBN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Žánr</PARAM_NAME>
+			<VAL>dětská</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Vazba</PARAM_NAME>
+			<VAL>vázaná</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Autor</PARAM_NAME>
+			<VAL>Jacqueline Wilsonová</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Jazyk</PARAM_NAME>
+			<VAL>Česky</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Počet stran</PARAM_NAME>
+			<VAL>186</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Rok vydání</PARAM_NAME>
+			<VAL>2004</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Nakladatelství</PARAM_NAME>
+			<VAL>BB art</VAL>
+		</PARAM>
+	</SHOPITEM>
+	<SHOPITEM>
+		<PRODUCT>Tajemství – Danielle Steelová</PRODUCT>
+		<DESCRIPTION>beletrie ostatní</DESCRIPTION>
+		<URL>http://obchod.cz/knihy/122655/Tajemstvi-Steel/</URL>
+		<IMGURL>http://obchod.cz/knihy/122655/Tajemstvi-Steel/obrazek.jpg</IMGURL>
+		<PRICE_VAT>67</PRICE_VAT>
+		<MANUFACTURER>Ikar</MANUFACTURER>
+		<CATEGORYTEXT>Knihy | beletrie</CATEGORYTEXT>
+		<EAN>8063859741252</EAN>
+		<ISBN>80-6385-974-1</ISBN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Žánr</PARAM_NAME>
+			<VAL>beletrie</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Vazba</PARAM_NAME>
+			<VAL>vázaná</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Autor</PARAM_NAME>
+			<VAL>Danielle Steel</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Jazyk</PARAM_NAME>
+			<VAL>Česky</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Počet stran</PARAM_NAME>
+			<VAL>237</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Rok vydání</PARAM_NAME>
+			<VAL>1996</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Nakladatelství</PARAM_NAME>
+			<VAL>Ikar</VAL>
+		</PARAM>
+	</SHOPITEM>
+
+	<SHOPITEM>
+		<PRODUCT>Tajemství – Julie Garwood</PRODUCT>
+		<DESCRIPTION>Judith Hamptonová, krásná a zároveň cílevědomá anglická dívka, slíbila své skotské přítelkyni z dětství, že jí bude stát po boku, až nastane čas narození jejího dítěte. Ale důvodem Judithina putování na vzdálenou skotskou Vysočinu je ještě něco jiného - touha shledat se s otcem, kterého nikdy nepoznala a o jehož existenci se dověděla teprve nedávno</DESCRIPTION>
+		<URL>http://obchod.cz/knihy/122655/Tajemstvi-Garwood/</URL>
+		<IMGURL>http://obchod.cz/knihy/122655/Tajemstvi-Garwood/obrazek.jpg</IMGURL>
+		<PRICE_VAT>109</PRICE_VAT>
+		<MANUFACTURER>OLDAG</MANUFACTURER>
+		<CATEGORYTEXT>Knihy | beletrie</CATEGORYTEXT>
+		<EAN>8054698231795</EAN>
+		<ISBN>80-5469-823-1</ISBN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Žánr</PARAM_NAME>
+			<VAL>beletrie</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Vazba</PARAM_NAME>
+			<VAL>pevná</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Autor</PARAM_NAME>
+			<VAL>Julie Garwood</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Jazyk</PARAM_NAME>
+			<VAL>Česky</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Počet stran</PARAM_NAME>
+			<VAL>328</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Rok vydání</PARAM_NAME>
+			<VAL>2007</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Nakladatelství</PARAM_NAME>
+			<VAL>OLDAG</VAL>
+		</PARAM>
+	</SHOPITEM>
+
+	<!-- Ukázka kvalitního XML souboru pro PNEUMATIKY  -->
+	<SHOPITEM>
+		<PRODUCT>Barum Polaris 2 165/70 R13 79T</PRODUCT>
+		<DESCRIPTION>Zimní pneumatiky Barum Polaris 2 165/70 R13 79 T . Nová zimní pneumatika Polaris 2 je nástupcem...</DESCRIPTION>
+		<URL>http://obchodxx.cz/pneumatiky/barum-polaris-2-165/70-r13-79t/</URL>
+		<IMGURL>http://obchodxx.cz/pneumatiky/barum-polaris-2-165/70-r13-79t/obrazek.jpg</IMGURL>
+		<PRICE_VAT>664</PRICE_VAT>
+		<MANUFACTURER>Barum</MANUFACTURER>
+		<CATEGORYTEXT>pneumatiky|zimni</CATEGORYTEXT>
+		<EAN>4024063261297</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Období</PARAM_NAME>
+			<VAL>zimní</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Zatížení</PARAM_NAME>
+			<VAL>osobní</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Nominální šířka</PARAM_NAME>
+			<VAL>165</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Vnitřní průměr</PARAM_NAME>
+			<VAL>R13</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Index rychlosti</PARAM_NAME>
+			<VAL>T (190km/h)</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Profil</PARAM_NAME>
+			<VAL>70</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Index nosnosti</PARAM_NAME>
+			<VAL>79</VAL>
+		</PARAM>
+	</SHOPITEM>
+	<SHOPITEM>
+		<PRODUCT>Bridgestone Turanza ER300 205/55 R16 91V</PRODUCT>
+		<DESCRIPTION>Turanza ER300 je pneumatika zaměřená na komfort a plnou kontrolu nad vozidlem. Konstrukce kostry...</DESCRIPTION>
+		<URL>http://obchodxx.cz/pneumatiky/bridgestone-turanza-er300-205/55-r16-91v/</URL>
+		<IMGURL>http://obchodxx.cz/pneumatiky/bridgestone-turanza-er300-205/55-r16-91v/obrazek.jpg</IMGURL>
+		<PRICE_VAT>1745</PRICE_VAT>
+		<MANUFACTURER>Bridgestone</MANUFACTURER>
+		<CATEGORYTEXT>pneumatiky | letní</CATEGORYTEXT>
+		<EAN>3286347876912</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Období</PARAM_NAME>
+			<VAL>letní</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Zatížení</PARAM_NAME>
+			<VAL>osobní</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Nominální šířka</PARAM_NAME>
+			<VAL>205</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Vnitřní průměr</PARAM_NAME>
+			<VAL>R16</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Index rychlosti</PARAM_NAME>
+			<VAL>V (240km/h)</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Profil</PARAM_NAME>
+			<VAL>55</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Index nosnosti</PARAM_NAME>
+			<VAL>91</VAL>
+		</PARAM>
+	</SHOPITEM>
+
+	<SHOPITEM>
+		<PRODUCT>Michelin Alpin A3 195/65 R15 91T</PRODUCT>
+		<DESCRIPTION>Při výrobě této pneumatiky byly použity dvě nové technologie StabiliGrip a HelioCompound. Díky nim je...</DESCRIPTION>
+		<URL>http://obchodxx.cz/penumatiky/michelin-alpin-a3-195/65-r15-91t/</URL>
+		<IMGURL>http://obchodxx.cz/pneumatiky/michelin-alpin-a3-195/65-r15-91t/obrazek.jpg</IMGURL>
+		<PRICE_VAT>1380</PRICE_VAT>
+		<MANUFACTURER>Michelin</MANUFACTURER>
+		<CATEGORYTEXT>pneumatiky|zimní</CATEGORYTEXT>
+		<EAN>3528701758121</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Období</PARAM_NAME>
+			<VAL>zimní</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Zatížení</PARAM_NAME>
+			<VAL>osobní</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Nominální šířka</PARAM_NAME>
+			<VAL>195</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Vnitřní průměr</PARAM_NAME>
+			<VAL>R15</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Index rychlosti</PARAM_NAME>
+			<VAL>T (190km/h)</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Profil</PARAM_NAME>
+			<VAL>65</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Index nosnosti</PARAM_NAME>
+			<VAL>91</VAL>
+		</PARAM>
+	</SHOPITEM>
+
+	<!-- Ukázka kvalitního XML souboru pro KOLEČKOVÉ BRUSLE -->
+	<SHOPITEM>
+		<PRODUCT>Worker Spring 2V1</PRODUCT>
+		<DESCRIPTION>Nejuniverzálnější brusle na trhu. Kolečková brusle s možností výměny koleček za nůž na bruslení.</DESCRIPTION>
+		<URL>http://obchodxx.cz/koleckove-brusle/worker-spring-2v1/</URL>
+		<IMGURL>http://obchodxx.cz/koleckove-brusle/worker-spring-2v1/321/obrazek.jpg</IMGURL>
+		<PRICE_VAT>595</PRICE_VAT>
+		<MANUFACTURER>Worker</MANUFACTURER>
+		<CATEGORYTEXT>kolečkové brusle</CATEGORYTEXT>
+		<EAN>8563497215689</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Určení</PARAM_NAME>
+			<VAL>dětské</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Kategorie</PARAM_NAME>
+			<VAL>rekreační</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Rám</PARAM_NAME>
+			<VAL>alu</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Maximální zatížení</PARAM_NAME>
+			<VAL>120kg</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Ložiska</PARAM_NAME>
+			<VAL>ABEC 1</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Tvrdost koleček</PARAM_NAME>
+			<VAL>PVC 64</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Velikost koleček</PARAM_NAME>
+			<VAL>24 mm</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Velikost</PARAM_NAME>
+			<VAL>33</VAL>
+			<VAL>34</VAL>
+			<VAL>35</VAL>
+			<VAL>36</VAL>
+		</PARAM>
+	</SHOPITEM>
+	<SHOPITEM>
+		<PRODUCT>Worker Dark</PRODUCT>
+		<DESCRIPTION>Kolečkové brusle WORKER splňují nejvyšší standard provedení bezpečnosti, vlastní certifikáty...</DESCRIPTION>
+		<URL>http://obchodxx.cz/koleckove-brusle/worker-dark/</URL>
+		<IMGURL>http://obchodxx.cz/koleckove-brusle/worker-dark/81587/obrazek.jpg</IMGURL>
+		<PRICE_VAT>990</PRICE_VAT>
+		<MANUFACTURER>Worker</MANUFACTURER>
+		<CATEGORYTEXT>kolečkové brusle</CATEGORYTEXT>
+		<EAN>8563724215487</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Určení</PARAM_NAME>
+			<VAL>unisex</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Kategorie</PARAM_NAME>
+			<VAL>rekreační</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Rám</PARAM_NAME>
+			<VAL>alu</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Maximální zatížení</PARAM_NAME>
+			<VAL>70kg</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Ložiska</PARAM_NAME>
+			<VAL>ABEC 5 Carbon</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Tvrdost koleček</PARAM_NAME>
+			<VAL>PU70</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Velikost koleček</PARAM_NAME>
+			<VAL>24 mm</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Velikost</PARAM_NAME>
+			<VAL>37</VAL>
+			<VAL>38</VAL>
+			<VAL>39</VAL>
+			<VAL>40</VAL>
+		</PARAM>
+	</SHOPITEM>
+	<SHOPITEM>
+		<PRODUCT>Worker Arena</PRODUCT>
+		<DESCRIPTION>Nastavitelné kolečkové brusle WORKER ARENA - CRYSTAL s posázenými křišťálovými kameny</DESCRIPTION>
+		<URL>http://obchodxx.cz/koleckove-brusle/worker-arena/</URL>
+		<IMGURL>http://obchodxx.cz/koleckove-brusle/worker-arena/81274/obrazek.jpg</IMGURL>
+		<PRICE_VAT>1188</PRICE_VAT>
+		<MANUFACTURER>Worker</MANUFACTURER>
+		<CATEGORYTEXT>kolečkové brusle</CATEGORYTEXT>
+		<EAN>8563724215487</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Určení</PARAM_NAME>
+			<VAL>dámské</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Kategorie</PARAM_NAME>
+			<VAL>rekreační</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Rám</PARAM_NAME>
+			<VAL>alu</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Maximální zatížení</PARAM_NAME>
+			<VAL>100kg</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Ložiska</PARAM_NAME>
+			<VAL>ABEC 7 Carbon</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Tvrdost koleček</PARAM_NAME>
+			<VAL>PU64</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Velikost koleček</PARAM_NAME>
+			<VAL>24 mm</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Velikost</PARAM_NAME>
+			<VAL>37</VAL>
+			<VAL>38</VAL>
+			<VAL>39</VAL>
+			<VAL>40</VAL>
+		</PARAM>
+	</SHOPITEM>
+
+	<!-- Ukázka kvalitního XML souboru pro JÍZDNÍ KOLA -->
+	<SHOPITEM>
+		<PRODUCT>Kellys Spider 2009</PRODUCT>
+		<DESCRIPTION>Horske kolo roku 2009</DESCRIPTION>
+		<URL>http://obchodxx.cz/Jizdni kola - horske/kellys-spider-2009/</URL>
+		<IMGURL>http://obchodxx.cz/jizdni kola -
+			horske/kellys-spider-2009/85677/obrazek.jpg</IMGURL>
+		<PRICE_VAT>11590</PRICE_VAT>
+		<MANUFACTURER>Kellys</MANUFACTURER>
+		<CATEGORYTEXT>jízdní kola|horské</CATEGORYTEXT>
+		<EAN>8563497215689</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Typ</PARAM_NAME>
+			<VAL>horské</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Určení</PARAM_NAME>
+			<VAL>pánské</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Rám</PARAM_NAME>
+			<VAL>ALUTEC alloy triple butted</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Hmotnost</PARAM_NAME>
+			<VAL>10kg</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Nosnost</PARAM_NAME>
+			<VAL>120kg</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Počet rychlostí</PARAM_NAME>
+			<VAL>23</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Model roku</PARAM_NAME>
+			<VAL>2009</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Velikost</PARAM_NAME>
+			<VAL>17,5"</VAL>
+			<VAL>19"</VAL>
+			<VAL>20"</VAL>
+			<VAL>21,5"</VAL>
+		</PARAM>
+	</SHOPITEM>
+	<SHOPITEM>
+		<PRODUCT>Author Context 2010</PRODUCT>
+		<DESCRIPTION>Velikost:16.5", 17.5", 19", 20", 21" Rám:tripple butted dural 6061 26" Přední vidlice:RST Omega TnL olejová uzamykatelná ...</DESCRIPTION>
+		<URL>http://obchodxx.cz/Jizdni kola - horske/author-context-2010/</URL>
+		<IMGURL>http://obchodxx.cz/jizdni kola -
+			horske/author-context-2010/82347/obrazek.jpg</IMGURL>
+		<PRICE_VAT>12924</PRICE_VAT>
+		<MANUFACTURER>Author</MANUFACTURER>
+		<CATEGORYTEXT>jizdní kola | horske</CATEGORYTEXT>
+		<EAN>8563497215487</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Typ</PARAM_NAME>
+			<VAL>horské</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Určení</PARAM_NAME>
+			<VAL>pánské</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Rám</PARAM_NAME>
+			<VAL>tripple butted dural 6061 26"</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Hmotnost</PARAM_NAME>
+			<VAL>12kg</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Nosnost</PARAM_NAME>
+			<VAL>150kg</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Počet rychlostí</PARAM_NAME>
+			<VAL>27</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Model roku</PARAM_NAME>
+			<VAL>2010</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Velikost</PARAM_NAME>
+			<VAL>16,5"</VAL>
+			<VAL>17,5"</VAL>
+			<VAL>19"</VAL>
+			<VAL>20"</VAL>
+			<VAL>21"</VAL>
+		</PARAM>
+	</SHOPITEM>
+	<SHOPITEM>
+		<PRODUCT>4Ever VIRUS SXC2 2009</PRODUCT>
+		<DESCRIPTION>Velikost:16.5", 17.5", 19", 20", 21"</DESCRIPTION>
+		<URL>http://obchodxx.cz/Jizdni kola - horske/4Ever-VIRUS-SXC2-2009/</URL>
+		<IMGURL>http://obchodxx.cz/jizdni kola -
+			horske/4Ever-VIRUS-SXC2-2009/82365/obrazek.jpg</IMGURL>
+		<PRICE_VAT>74999</PRICE_VAT>
+		<MANUFACTURER>4ever</MANUFACTURER>
+		<CATEGORYTEXT>jízdní kola | horské</CATEGORYTEXT>
+		<EAN>8563497216324</EAN>
+		<DELIVERY_DATE>2</DELIVERY_DATE>
+		<PARAM>
+			<PARAM_NAME>Typ</PARAM_NAME>
+			<VAL>horské</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Určení</PARAM_NAME>
+			<VAL>pánské</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Rám</PARAM_NAME>
+			<VAL>Carbon Full</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Hmotnost</PARAM_NAME>
+			<VAL>10,85kg</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Nosnost</PARAM_NAME>
+			<VAL>100kg</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Počet rychlostí</PARAM_NAME>
+			<VAL>27</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Model roku</PARAM_NAME>
+			<VAL>2009</VAL>
+		</PARAM>
+		<PARAM>
+			<PARAM_NAME>Velikost</PARAM_NAME>
+			<VAL>16,5</VAL>
+			<VAL>17,5</VAL>
+			<VAL>19</VAL>
+			<VAL>20</VAL>
+			<VAL>21</VAL>
+		</PARAM>
+	</SHOPITEM>
+
+</SHOP>
