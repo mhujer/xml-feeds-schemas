@@ -14,19 +14,15 @@
         <xs:element name="SHOPITEM" maxOccurs="unbounded">
           <xs:annotation>
             <xs:appinfo>
+              <!-- @todo -->
               <sch:ns uri="urn:x-hujer:feed:heureka" prefix="feed"/>
-              <sch:pattern
-                name="PRODUCT je nepovinný, pokud jsou uvedeny elementy PRODUCTNAME a PRODUCTNAMEEXT">
-                <sch:rule context="feed:SHOPITEM">
-                  <sch:report
-                    test="(not(feed:PRODUCTNAME) or not(feed:PRODUCTNAMEEXT)) and not(feed:PRODUCT)"
-                    >Není zadáno PRODUCT ani PRODUCTNAME a PRODUCTNAMEEXT</sch:report>
-                </sch:rule>
-              </sch:pattern>
               <sch:pattern name="PRICE_VAT je nepovinné, pokud jsou vyplněn PRICE a VAT">
                 <sch:rule context="feed:SHOPITEM">
-                  <sch:report test="(not(feed:PRICE) or not(feed:VAT)) and not(feed:PRICE_VAT)">Není
-                    zadáno PRICE_VAT ani PRICE a VAT</sch:report>
+                  <sch:assert test="((feed:PRICE) or (feed:PRICE and feed:VAT) or (feed:PRICE_VAT))">
+                    Ceny na serveru Heureka.cz uvádíme konečné. Rozeznáváme je následujícím způsobem:
+                    a) je uveden element PRICE_VAT, bereme částku jako konečnou cenu
+                    b) jsou uvedeny elementy PRICE a VAT, dopočítáme na konečnou cenu
+                    c) je uveden pouze element PRICE, bereme tuto částku jako konečnou</sch:assert>
                 </sch:rule>
               </sch:pattern>
             </xs:appinfo>
@@ -35,10 +31,10 @@
             <xs:sequence>
               <xs:element name="PRODUCT">
                 <xs:annotation>
-                  <xs:documentation> obsahuje název produktu, musí obsahovat, snažte se uvádět
-                    přesné označení produktu, vč. produktového (modelového) čísla. Pokud názvy
-                    produktů nebudou obsahovat produktové číslo, hrozí, že nedokážeme produkty
-                    správně identifikovat a tudíž spárovat. Do názvu produktu neuvádějte žádné další
+                  <xs:documentation>obsahuje název produktu, musí obsahovat, snažte se uvádět přesné
+                    označení produktu, vč. produktového (modelového) čísla. Pokud názvy produktů
+                    nebudou obsahovat produktové číslo, hrozí, že nedokážeme produkty správně
+                    identifikovat a tudíž spárovat. Do názvu produktu neuvádějte žádné další
                     přívlastky, typu doprava zdarma, plus pouzdro, skladem aj.</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -80,6 +76,9 @@
               </xs:element>
               <xs:element name="DUES" type="TYPE_HEUREKA_PRICE" minOccurs="0"/>
               <xs:element name="VAT" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>sazba DPH</xs:documentation>
+                </xs:annotation>
                 <xs:simpleType>
                   <xs:union>
                     <xs:simpleType>
